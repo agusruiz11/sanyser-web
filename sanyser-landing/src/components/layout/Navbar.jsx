@@ -1,0 +1,153 @@
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+import Button from '../ui/Button';
+
+const navLinks = [
+  { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Productos', href: '#productos' },
+  { label: 'Servicios', href: '#servicios' },
+  { label: 'Obras', href: '#obras' },
+  { label: 'Contacto', href: '#presupuesto' },
+];
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      const offset = 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+    setMenuOpen(false);
+  };
+
+  return (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? 'bg-primary-navy shadow-lg' : 'bg-primary-navy/95'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <a
+              href="#hero"
+              onClick={(e) => handleNavClick(e, '#hero')}
+              className="flex items-center gap-2 flex-shrink-0"
+            >
+              <div className="flex items-center gap-1">
+                <span className="text-primary-orange font-bold text-2xl tracking-tight">SAN</span>
+                <span className="text-white font-bold text-2xl tracking-tight">YSER</span>
+              </div>
+              <div className="hidden sm:block w-px h-6 bg-white/20 mx-1" />
+              <span className="hidden sm:block text-white/60 text-xs uppercase tracking-wider leading-tight">
+                Materiales<br />Sanitarios
+              </span>
+            </a>
+
+            {/* Desktop nav */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-white/80 hover:text-white hover:text-primary-orange transition-colors duration-200 font-medium text-sm"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+
+            {/* CTA + hamburger */}
+            <div className="flex items-center gap-3">
+              <Button
+                href="#presupuesto"
+                onClick={(e) => handleNavClick(e, '#presupuesto')}
+                size="sm"
+                className="hidden md:inline-flex"
+              >
+                Pedí tu presupuesto
+              </Button>
+
+              <button
+                type="button"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+                aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+              >
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile drawer */}
+      <>
+        {/* Overlay */}
+        <div
+          onClick={() => setMenuOpen(false)}
+          className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ${
+            menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+        />
+
+        {/* Drawer */}
+        <div
+          className={`fixed top-0 right-0 h-full w-72 bg-primary-navy z-50 md:hidden transform transition-transform duration-300 shadow-2xl ${
+            menuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex items-center justify-between p-6 border-b border-white/10">
+            <span className="text-white font-bold text-xl">
+              <span className="text-primary-orange">SAN</span>YSER
+            </span>
+            <button
+              type="button"
+              onClick={() => setMenuOpen(false)}
+              className="text-white p-1 hover:text-primary-orange transition-colors"
+              aria-label="Cerrar menú"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          <div className="flex flex-col p-6 gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-white/80 hover:text-primary-orange transition-colors duration-200 font-medium py-3 px-4 rounded-lg hover:bg-white/5 text-base"
+              >
+                {link.label}
+              </a>
+            ))}
+
+            <div className="mt-6">
+              <Button
+                href="#presupuesto"
+                onClick={(e) => handleNavClick(e, '#presupuesto')}
+                className="w-full"
+              >
+                Pedí tu presupuesto
+              </Button>
+            </div>
+          </div>
+        </div>
+      </>
+    </>
+  );
+}

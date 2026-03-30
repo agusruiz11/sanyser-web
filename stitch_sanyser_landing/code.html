@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SANYSER | Suministros Industriales y Sanitarios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e2e2e2",
+                "tertiary": "#005ea3",
+                "secondary-fixed-dim": "#afc9ea",
+                "surface": "#f9f9f9",
+                "on-secondary-fixed-variant": "#304864",
+                "on-secondary-fixed": "#001d36",
+                "inverse-on-surface": "#f1f1f1",
+                "inverse-surface": "#2f3131",
+                "surface-variant": "#e2e2e2",
+                "secondary-container": "#c3dcfe",
+                "on-surface-variant": "#5c4037",
+                "on-tertiary-fixed": "#001c37",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "on-background": "#1a1c1c",
+                "primary-fixed": "#ffdbcf",
+                "tertiary-container": "#0077cd",
+                "secondary-fixed": "#d1e4ff",
+                "secondary": "#48607d",
+                "on-error-container": "#93000a",
+                "primary-fixed-dim": "#ffb59c",
+                "error": "#ba1a1a",
+                "surface-container-high": "#e8e8e8",
+                "on-tertiary-fixed-variant": "#004880",
+                "outline": "#907065",
+                "on-secondary-container": "#48617e",
+                "surface-container-low": "#f3f3f3",
+                "inverse-primary": "#ffb59c",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#a1c9ff",
+                "tertiary-fixed": "#d2e4ff",
+                "on-error": "#ffffff",
+                "primary-container": "#d04400",
+                "surface-tint": "#aa3600",
+                "surface-bright": "#f9f9f9",
+                "surface-container-lowest": "#ffffff",
+                "primary": "#a63500",
+                "surface-container": "#eeeeee",
+                "surface-dim": "#dadada",
+                "background": "#f9f9f9",
+                "on-primary-fixed": "#390c00",
+                "on-tertiary-container": "#fdfcff",
+                "outline-variant": "#e5beb2",
+                "on-surface": "#1a1c1c",
+                "on-primary-fixed-variant": "#822700",
+                "on-primary-container": "#fffbff"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .blueprint-grid { background-image: radial-gradient(circle, #48607d22 1px, transparent 1px); background-size: 32px 32px; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Header / TopAppBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 glass-nav bg-slate-900/90 z-50 shadow-xl">
+<div class="text-2xl font-black text-white tracking-tighter font-headline">SANYSER</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#productos">Products</a>
+<a class="text-slate-300 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#servicios">Services</a>
+<a class="text-slate-300 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#obras">Projects</a>
+<a class="text-slate-300 hover:text-white transition-colors font-headline font-bold tracking-tight" href="#faq">FAQ</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-[#ff5500] text-white px-6 py-2 rounded-lg font-headline font-bold hover:scale-95 active:scale-90 transition-transform">
+                Request Quote
+            </button>
+<span class="material-symbols-outlined text-white cursor-pointer" data-icon="shopping_cart">shopping_cart</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
+<div class="absolute inset-0 z-0">
+<img alt="Industrial Site" class="w-full h-full object-cover opacity-40" data-alt="dramatic wide shot of a complex industrial construction site with steel beams and heavy machinery under a moody sunset sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCicIsaIgbNYW1dJ3UE9cecAiq846RWEmFXzj8XTNbfiL7ipDd7c0_q323o41TzsiHVjpQ-yd3yDtCx5n9WY-xcEUfGB86fLI4lZPp4P84XeyE9W9y5UFgYskqw5SFduX9outfn6emnI5yO3JTk70ZhXswTCF8WLRdALVoEJ1Lz5bhoAPKSh-F7CUNRfvhnTsGwXVPcwTvHSGhZICXJY3ilghzhUJIF5USuP2LP7XX2K1yvqoYTgV5bmj1PByhyjlUM2lC_LE-ircE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-block px-4 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-fixed-dim text-sm font-bold tracking-widest uppercase">
+                    Líderes en Suministros Sanitarios
+                </div>
+<h1 class="text-6xl md:text-8xl font-black font-headline text-white leading-[0.9] tracking-tighter">
+                    Sanitarios para <br/><span class="text-[#ff5500]">tus obras.</span>
+</h1>
+<p class="text-xl text-slate-300 max-w-lg font-light leading-relaxed">
+                    Sanitarios para tus obras, servicios que las potencian. Proveemos soluciones integrales de alta ingeniería para el mercado de la construcción en Argentina.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-[#ff5500] text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] transition-all flex items-center gap-2">
+                        Pedí tu presupuesto
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-slate-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all">
+                        Ver catálogo
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Nosotros / Stats -->
+<section class="py-24 bg-surface container mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Team Warehouse" class="w-full h-full object-cover" data-alt="organized modern industrial warehouse interior with specialized plumbing equipment and technicians working in professional gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbkM1RLpZu8_9iICJgeMMrWZaMppz1IvjrZifPuIK2jW9YqU9s-7bTbwsuCc77PfdejotJvdXPtU4tBsWvKbakJOJTHevW_FrjhQUIfJGxFIDMasav4ZnYGqFhSeyNk3Z1cl-CshSVWaGPb5HlEcdpWqhJ5uuEqWSYDDbfvdwM2Ov7qvKWe1WhkLYm1Aw1QTR3ynpeDx57ycs1pYnkuYfwhLp76TMT_NH3SZIlcAMzezqJQlzko1uHk4omMDnFD1518SQXr2rpUuU"/>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-white p-8 rounded-2xl shadow-xl hidden lg:block max-w-xs border-t-4 border-[#ff5500]">
+<p class="text-secondary font-medium italic">"Comprometidos con la excelencia operativa y la entrega inmediata en cada punto del país."</p>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-5xl font-black font-headline text-slate-900 tracking-tight">Experiencia que construye confianza</h2>
+<p class="text-lg text-secondary leading-relaxed">
+                    SANYSER nace de la necesidad de profesionalizar el suministro de materiales sanitarios e industriales. Con años liderando el mercado argentino, no solo vendemos productos; diseñamos el flujo vital de tus proyectos.
+                </p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div class="border-l-4 border-[#ff5500] pl-6 py-2">
+<div class="text-4xl font-black font-headline text-slate-900">25+</div>
+<div class="text-secondary-fixed-dim font-bold uppercase tracking-widest text-xs">Marcas Líderes</div>
+</div>
+<div class="border-l-4 border-secondary pl-6 py-2">
+<div class="text-4xl font-black font-headline text-slate-900">1.2k+</div>
+<div class="text-secondary-fixed-dim font-bold uppercase tracking-widest text-xs">Obras Finalizadas</div>
+</div>
+<div class="border-l-4 border-secondary pl-6 py-2">
+<div class="text-4xl font-black font-headline text-slate-900">15+</div>
+<div class="text-secondary-fixed-dim font-bold uppercase tracking-widest text-xs">Años de Trayectoria</div>
+</div>
+<div class="border-l-4 border-[#ff5500] pl-6 py-2">
+<div class="text-4xl font-black font-headline text-slate-900">24hs</div>
+<div class="text-secondary-fixed-dim font-bold uppercase tracking-widest text-xs">Logística Priority</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories / Product Bento -->
+<section class="py-24 bg-surface-container-low blueprint-grid" id="productos">
+<div class="container mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-5xl font-black font-headline text-slate-900">Nuestro Catálogo</h2>
+<p class="text-secondary mt-2">Soluciones certificadas para cada etapa de la obra.</p>
+</div>
+<button class="text-[#ff5500] font-bold flex items-center gap-2 group">
+                    Descargar catálogo completo
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="download">download</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Bombas -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-[#ff5500]">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-4" data-icon="water_pump">water_pump</span>
+<h3 class="text-2xl font-bold font-headline">Bombas</h3>
+<p class="text-secondary mt-2 text-sm">Presurizadoras, centrífugas y sumergibles de alta eficiencia.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="industrial water pump unit with chrome finish and technical fittings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv0VHMIS74jGHe3LI9-rMkQP6M-9pDdqrr5rVD4ywyKCouoKdUUPYIfjZGGUItLTrdjArn2bs3O5MlbrfWZZ40Sql3wYQeJv0nPJrgjC_WoRBt1SzFhXlKvmBLZ4YIC1Iziuiq1qdCp9f5GRtKWKGYMYX_SC9rtdq5RCHj4z16ikaTNnS6kXhKNXNIrBiRn6p0N_zaFzBYuU6yhh5_oM9slGnXlWYihnnMUOX_RXG_sRENVhQX-MHd60r2O6RVoo9oOk00SOGCNP4"/>
+</div>
+<!-- Sistemas de tuberías -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-secondary">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="account_tree">account_tree</span>
+<h3 class="text-2xl font-bold font-headline">Sistemas de tuberías</h3>
+<p class="text-secondary mt-2 text-sm">Termofusión, PVC, PEAD y soluciones en acero inoxidable.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="abstract close up of professional blue and orange pex piping arranged in a parallel layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxa2rMZBYuW013P37a8HHyvojCgp2XDWVWkrME85dY1vYko0TGsaWtLi9k7X3ssauc4b5P8StFxjMNk20VUepM_JVjXDJ50IGDlIlVO1bjSAFXrs69ngOxVFqvOr2GMySK6Lulyd8yy3Vi2i33acRoWTaD_t3EJ6STPFPIs4e0NIhDJpJLhDZ83YVBglKnH73PE1Uzk3k69V2WaBJ0vQ5u_FO8acRMuAliRiYiQ491PP6OKSWLAd-sJgr5NPwKCXAW3F2gqeaLgQc"/>
+</div>
+<!-- Artefactos y griferías -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-[#ff5500]">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-4" data-icon="faucet">faucet</span>
+<h3 class="text-2xl font-bold font-headline">Artefactos y griferías</h3>
+<p class="text-secondary mt-2 text-sm">Diseño de vanguardia y tecnología de ahorro de agua.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="luxury minimalist chrome faucet over a clean ceramic sink in a bright architectural setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJZ6WLfreWYb0rs3LU0T7EZRlFdJVIAVeJlT5bxniQydHKNERAhj5lVIMWJTeOUxxnYtq3B9jZuaCUHukcJSccXemqlYf0gWee-DlhQ_r7dMU4hU1rQ4qcapKAlYe6ywfrt_XZjczrBkiWQdqFiEkjwfFrrMbCZesL_fsn8gjZTwap8bJOIITe3f1Kys_Rxm0yxcIumPiiIQkh4Pn6hVT6reBW_LzBUdPMaBObFSMbEyswShRhPDk_n6k_NEmFZhs_H539pghlcLM"/>
+</div>
+<!-- Calderas -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-secondary">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="thermostat">thermostat</span>
+<h3 class="text-2xl font-bold font-headline">Calderas y termotanques</h3>
+<p class="text-secondary mt-2 text-sm">Climatización central y agua caliente sanitaria de gran volumen.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="modern industrial water heater boiler with digital display and metallic finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArZkpkimMFtQcSTc57TCE72YgSETMAyuQB-IAmMuBjZdVYUdRpQxLjYYj-lsrdxK81_Y2CgGSHpidICCqCT2xbCgmfm94rFgbnuShY5XIhnVXUG9S5sc1mfFhL7YZH8yCR0-tGs-wNT-Xhpnsd0DJkr5dCrMCZ5Ny6tJ2abBMzl6OCaelJ0lY4R4mW90qAjZzt-DBrzD0IBYOvD5girOP7dZWrXzPJF_mkFOhW7rRGIiHxalRA8nbQ1JClpyp0C8Jr6s8PZuEkSQ4"/>
+</div>
+<!-- Tanques -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-[#ff5500]">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-4" data-icon="database">database</span>
+<h3 class="text-2xl font-bold font-headline">Tanques y cisternas</h3>
+<p class="text-secondary mt-2 text-sm">Reserva de agua potable y sistemas contra incendio.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="large industrial polyethylene water storage tank in a specialized warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiBXq8lvG4MAMBz053nPqiKZCy4UozD9bkfNDxG1Sx9qDU4ejjAv7qqLfE-T3L5kpxmA8uPT2tfX6dz-9TJ1_BtcdG0OZ6aKHlsTiIAHiDoe_CwYzlrxPg_DdYlxWluTa3KKze6b5_3LvmwV_dkyIkTt23hDkvsDzpBUugpvqwZ7SB9U0N7FrGC5gcnetzzBOz57wp6VtJu3K9TnmkqR_hJo2mLw2t7Sc0dRVa1acv-f7INsnyZaLe9Xr96x7604T1eZx1c8RhNGY"/>
+</div>
+<!-- Válvulas -->
+<div class="group relative overflow-hidden rounded-2xl bg-white p-8 min-h-[300px] flex flex-col justify-between hover:shadow-2xl transition-all border-b-4 border-transparent hover:border-secondary">
+<div class="z-10">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="settings_input_component">settings_input_component</span>
+<h3 class="text-2xl font-bold font-headline">Válvulas</h3>
+<p class="text-secondary mt-2 text-sm">Control de flujo industrial y automatización de sistemas.</p>
+</div>
+<a class="mt-4 text-slate-900 font-bold flex items-center gap-2" href="#">Ver más <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+<img class="absolute right-0 bottom-0 w-40 opacity-20 group-hover:scale-110 transition-transform" data-alt="close up of a heavy duty red industrial valve with steel pipe connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV9qSuDBe-vvuITYYjtX0DE_XF31r0VUO9gOkcPsQPgdm0bA0VeUXbbO3yNTafz4vvKtB4sCq8BwcPRkvFQFbtvoD20dlxGIM8lbOOnU9iVol7iXmUj5IlZOZb--htXfJ9fGBNJ8cTkrO_OW0QmLAR4EH2yIpettkW3-ZPyU2Nl-zzCiIop0sNperFuEY8vGh2ciee6mGUXUH2Jr89DscE3Nk6evmKLF7JvRbydoa3jQIsGjdRkLfBXXpZqVsnVMFmuPDccd55K30"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Brands Grid -->
+<section class="py-16 bg-white overflow-hidden">
+<div class="container mx-auto px-8">
+<p class="text-center text-secondary font-bold uppercase tracking-[0.3em] mb-12 text-sm">Aliados Estratégicos</p>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-12 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="flex items-center justify-center font-black text-2xl">BRAND 01</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 02</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 03</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 04</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 05</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 06</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 07</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 08</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 09</div>
+<div class="flex items-center justify-center font-black text-2xl">BRAND 10</div>
+</div>
+</div>
+</section>
+<!-- Servicios -->
+<section class="py-24 bg-slate-900 text-white" id="servicios">
+<div class="container mx-auto px-8">
+<div class="max-w-3xl mb-16">
+<h2 class="text-5xl font-black font-headline tracking-tight mb-6">Servicios de Ingeniería de Valor</h2>
+<p class="text-slate-400 text-lg">No solo proveemos materiales; somos el brazo técnico que asegura la factibilidad y éxito de tu instalación sanitaria.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-px bg-slate-800 border border-slate-800 rounded-3xl overflow-hidden">
+<!-- Asesoramiento -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="support_agent">support_agent</span>
+<h4 class="text-xl font-bold mb-4">Asesoramiento</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Asistencia técnica personalizada para la selección de productos bajo normativa vigente.</p>
+</div>
+<!-- Proyectos -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="architecture">architecture</span>
+<h4 class="text-xl font-bold mb-4">Proyectos sanitarios / Ingeniería</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Cálculo de dimensionamiento y diseño de planos técnicos para instalaciones complejas.</p>
+</div>
+<!-- Fabricación -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h4 class="text-xl font-bold mb-4">Fabricación de colectores</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Producción a medida de colectores para baterías de tanques y salas de máquinas.</p>
+</div>
+<!-- Capacitación -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="school">school</span>
+<h4 class="text-xl font-bold mb-4">Capacitación a profesionales</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Workshops técnicos sobre nuevas tecnologías en termofusión y sistemas inteligentes.</p>
+</div>
+<!-- Logística -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="local_shipping">local_shipping</span>
+<h4 class="text-xl font-bold mb-4">Logística inmediata</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Flota propia para asegurar entregas en obra en 24hs dentro de AMBA y envíos al interior.</p>
+</div>
+<!-- Asistencia -->
+<div class="p-10 bg-slate-900 hover:bg-slate-800 transition-colors group">
+<span class="material-symbols-outlined text-4xl text-[#ff5500] mb-6 block" data-icon="engineering">engineering</span>
+<h4 class="text-xl font-bold mb-4">Asistencia a obra</h4>
+<p class="text-slate-400 text-sm leading-relaxed">Visitas de supervisión técnica para garantizar la correcta aplicación de los sistemas.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio / Obras -->
+<section class="py-24 bg-surface overflow-hidden" id="obras">
+<div class="container mx-auto px-8">
+<h2 class="text-5xl font-black font-headline text-slate-900 mb-16">Obras que nos respaldan</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="lg:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-2xl h-[600px]">
+<img alt="Corporate Building" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern corporate glass skyscraper against a bright blue sky representing commercial construction projects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMNXdctvm5Cx8rLBXVRB8IS33D4dufFjZWONvLGRzEU8T4DtgsfgEH5oWF01NF0qaJWefPaO_x4wWgky37-8aifpJWuwJ4JVh5yFNaXHwXKYOhz2zr6QND4RoC1qJFgKDNm-y5vEUTiaO8O8ozhYEI5kTYr9jqXO2JyHb-3IBTtLEW_sKsQH4F76OwRiUOR25FL2tWFN20Axz1uiSRQLOUvNubMqQXRhne4vd8OPNEAiEXqHLu5f_jwQ_bTAIomkrBboectUXFjI0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent flex flex-col justify-end p-8">
+<h4 class="text-white text-2xl font-bold font-headline">Torre Alvear</h4>
+<p class="text-slate-300">Instalación completa de sistemas presurizados y cloacales.</p>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl h-[292px]">
+<img alt="Industrial Plant" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="large industrial complex with specialized piping and storage systems" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgAktMDVICbEaQ87EBzRoWf38RyJSQH-EWJ9YSSmzuk9Xv4oqxS-YqgWfBgdg_XdLoCjS0zS7Gi9GtvCeQeCL6c9CAIWfkkiOwxqnrzbpXoc5iOX8t2UA-XogcmBBXSx_VtqeND68J-3NPucRWRmBabMtsmfTn6WAnFWZFaxgCHl0SuDW8KIOo5uSy56NitsFsSwC2o1SzXdusLXEQRsNCi6XXRoh-YxBJmVUXaroQPogGndZFro74BxQGZITunt51s2GiR2p2tvA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-bold">Planta Industrial Quilmes</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl h-[292px]">
+<img alt="Luxury Residential" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern luxury residential complex with sleek architectural lines and advanced plumbing integration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwn1MstnVe5WjeHZGr_SyjTIvXp-noUz16BUSakhLPAy0WO_EjvTfUGkCW3MfHiU1j4iEBU2PWuwMS_0TkcPUqS3krWHRhI62e8a2A0vH7li6faHJcrTpHBNjdBuZogZas28obHRfaCaaICY9q4utvJQmxaDpOPeZxKOFeseU2cykqieIDvko84KycQwzGC1MNIYO7qPrYAh3Z2HorrXdVUyX-yWuhytxIaXLE5VivXZPx866OLuQfDa4hC-n_ECzE1aopObracw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-bold">Residencial Nordelta</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl h-[292px]">
+<img alt="Hotel Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="boutique hotel interior with high end sanitary fixtures and custom plumbing design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxn0oEZRagt97iXPPyD8X6zpGYAFzuOepBJn6PaWCw5VnRBacjvNEN-gfQqMdtUh6E3zoGJjYSltcR7njulZNUzGv0JlWkdlGm4YHvLTVBEn33ICM8ycJFTfieG-iRINFD9zkBpPoormCwiMioFugOKyIKem35egY4vaOIQ_g8eggU_hVY6SaUMy-h66lvZ-xv3Bm3_-b9qz0CBiFjQEXuvIZvis_tV5enomIPyKQy_w7Qx43Qu0E3McRJ0bCn6LqytONMFKZyFRM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-bold">Hotel Faena</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-2xl h-[292px]">
+<img alt="Hospital Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern medical facility with high-tech infrastructure and specialized sanitary requirements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhfRIQQcZvAyoZCAlltdWD7jawwyjKKHm8k6iaL9S4b2qlXcpnCOAhaUi3QZQvBh8s_uGxlhkZ1zHtVg4jAQ8hnAqbP3sJ89WNg4r_-8I8mAaPyD6KeemBg3EKbPYwGOV8OAEhts_Lxr3X45YSmuM0xdeU__Fq-Uau9e9WbQVfee6Vw9YYWcNjwtrySJ2XTwBh0URJd4kPhmyQRkj1M5lQ_8BzERXPew88riH2o_WcpZFVRAduSNLsxwhC-NWDHDRGoBmu1VkffA4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-bold">Centro Médico OSDE</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white p-10 rounded-2xl shadow-sm border-t-4 border-[#ff5500]">
+<span class="material-symbols-outlined text-4xl text-slate-200 block mb-6" data-icon="format_quote">format_quote</span>
+<p class="text-secondary italic mb-8">"SANYSER es nuestro socio estratégico. Su asesoramiento técnico en la etapa de proyecto nos ahorró un 15% en costos de materiales."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-100 rounded-full"></div>
+<div>
+<div class="font-bold text-slate-900">Arq. Marcos Rossi</div>
+<div class="text-xs text-secondary uppercase tracking-widest">Estudio R+A</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-sm border-t-4 border-secondary">
+<span class="material-symbols-outlined text-4xl text-slate-200 block mb-6" data-icon="format_quote">format_quote</span>
+<p class="text-secondary italic mb-8">"La velocidad de entrega en obra es inigualable. Tienen stock real cuando otros te dan vueltas por semanas."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-100 rounded-full"></div>
+<div>
+<div class="font-bold text-slate-900">Ing. Clara Méndez</div>
+<div class="text-xs text-secondary uppercase tracking-widest">Constructora Lomas</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-10 rounded-2xl shadow-sm border-t-4 border-[#ff5500]">
+<span class="material-symbols-outlined text-4xl text-slate-200 block mb-6" data-icon="format_quote">format_quote</span>
+<p class="text-secondary italic mb-8">"Excelente calidad en los colectores a medida. Facilitaron enormemente la instalación en la sala de máquinas del complejo."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-slate-100 rounded-full"></div>
+<div>
+<div class="font-bold text-slate-900">Juan Carlos Díaz</div>
+<div class="text-xs text-secondary uppercase tracking-widest">Master Plumber</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quote Form -->
+<section class="py-24 bg-surface" id="quote">
+<div class="container mx-auto px-8">
+<div class="bg-slate-900 rounded-[2rem] overflow-hidden flex flex-col md:flex-row shadow-2xl">
+<div class="p-12 md:w-1/2 flex flex-col justify-between text-white bg-[radial-gradient(circle_at_top_right,#ff550044,transparent)]">
+<div>
+<h2 class="text-5xl font-black font-headline tracking-tight mb-8">Hablemos de <br/>tu próximo proyecto.</h2>
+<p class="text-slate-400 max-w-sm mb-12">Nuestros especialistas técnicos te contactarán en menos de 4 horas hábiles para coordinar tu presupuesto.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-[#ff5500] material-symbols-outlined" data-icon="call">call</span>
+<div>
+<div class="text-xs text-slate-500 uppercase font-bold tracking-widest">Teléfono</div>
+<div class="font-bold">+54 11 4242-4242</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-[#ff5500] material-symbols-outlined" data-icon="mail">mail</span>
+<div>
+<div class="text-xs text-slate-500 uppercase font-bold tracking-widest">Email</div>
+<div class="font-bold">ventas@sanyser.com.ar</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-white/5 border border-white/10 rounded-2xl">
+<p class="text-sm font-medium italic text-slate-300">"Nuestra prioridad es que tu obra no se detenga. Stock garantizado en los productos críticos de tu instalación."</p>
+</div>
+</div>
+<div class="p-12 md:w-1/2 bg-white">
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Nombre completo</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-[#ff5500] focus:ring-0 rounded-t-lg px-4 py-3" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Teléfono / WhatsApp</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-[#ff5500] focus:ring-0 rounded-t-lg px-4 py-3" placeholder="+54 9 11..." type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Email Corporativo</label>
+<input class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-[#ff5500] focus:ring-0 rounded-t-lg px-4 py-3" placeholder="email@empresa.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Tipo de obra</label>
+<select class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-[#ff5500] focus:ring-0 rounded-t-lg px-4 py-3">
+<option>Residencial unifamiliar</option>
+<option>Edificio en altura</option>
+<option>Industrial / Galpón</option>
+<option>Institucional / Salud</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest">Detalle del requerimiento</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b-2 border-transparent focus:border-[#ff5500] focus:ring-0 rounded-t-lg px-4 py-3" placeholder="Contanos qué materiales o servicios necesitás..." rows="4"></textarea>
+</div>
+<button class="w-full bg-[#ff5500] text-white font-bold py-5 rounded-xl hover:shadow-lg transition-all text-lg" type="submit">
+                            Enviar consulta inmediata
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-low" id="faq">
+<div class="container mx-auto px-8 max-w-4xl">
+<h2 class="text-4xl font-black font-headline text-slate-900 mb-12 text-center">Consultas Frecuentes</h2>
+<div class="space-y-4">
+<details class="group bg-white rounded-2xl shadow-sm overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-slate-900">¿Realizan envíos a todo el país?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-slate-50 pt-4">
+                        Sí, contamos con una red logística propia para AMBA y acuerdos con los principales transportes para llegar a cualquier punto de Argentina en tiempos récord.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-slate-900">¿Brindan asesoramiento técnico en obra?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-slate-50 pt-4">
+                        Absolutamente. Nuestros ingenieros realizan visitas de seguimiento para asegurar que los productos adquiridos se instalen correctamente según las especificaciones del fabricante.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-slate-900">¿Trabajan con marcas específicas para licitaciones?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-slate-50 pt-4">
+                        Somos distribuidores oficiales de las principales marcas del mercado (IPS, Saladillo, Ferrum, FV, entre otras), cumpliendo con todos los estándares para licitaciones públicas y privadas.
+                    </div>
+</details>
+<details class="group bg-white rounded-2xl shadow-sm overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-bold text-slate-900">¿Hacen colectores a medida?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-secondary text-sm leading-relaxed border-t border-slate-50 pt-4">
+                        Sí, contamos con un taller especializado para la fabricación de colectores bajo plano, adaptándonos a las necesidades específicas de cada sala de máquinas.
+                    </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full pt-16 pb-8 bg-slate-900 px-8 md:px-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1">
+<span class="text-xl font-black text-white mb-4 block font-headline tracking-tighter">SANYSER</span>
+<p class="text-slate-400 text-sm mb-6 max-w-xs">Especialistas en la provisión integral de materiales para la conducción de fluidos y terminaciones sanitarias de alta gama.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-[#ff5500] transition-colors" href="#">
+<img alt="Facebook" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4-8PpeojmSgHLT801IoGK3MsswYH0MY8RBSO2tEdZZ90Jv936BGQHhyjlpVaK3N-Dycnx_rsdDy5vtOPTZAjiN127BRBu6Qm3kgx8eOxJNJHu9xYruElFwgDRbGImZcpWC_rrEoG9gYLgWFYUxGuuI--WLerl8VpVH0SqiykB8_8K_fXV3xjqJNwUErW8b5KSGIlSGbdoLOXhNIyUSEnAu5J7PxwPK9Adye9dVDFJuxfQ02RPkE5n7m1EcipObW8HBvkXmYztUic"/>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-[#ff5500] transition-colors" href="#">
+<img alt="Instagram" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHEluGI2Exq6fbnHHk9isbXG81tkpDzzYYpG2D6JHYTvgCQlErCy7QwC2_mZpy7K5w21avHJq2QJAxdM0AfJkv2wJ_AZvlyG7fCNDv5guYMsfapjcroTUWc_7akMkSnxXV_10XQ2zwcuG6F54pksDQUjN79p-Y9GJA3zZ28xxpJSv2Z6o6zwGmUxD3gNHxNCLuFKaMdupvWN1qx6iHY_Tk7e6D55GQPtVR4mK8pezhHVnJHirX-tkJ5H3wzDaFd-6A6GTfEkCJGGA"/>
+</a>
+<a class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-[#ff5500] transition-colors" href="#">
+<img alt="LinkedIn" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVon8KokKVV-ai9euch_stHRkhKU-zT9vliBbnnPhrICKj4QZlqhnX-Xh0A2SBRdTwoWEaFtd-iFCwFPkA-fxxZ0PtUecS9wjcjZfpenw0jBOxKWvLzWKMeyFgYZLD8E6NVHv4aC_mHSOBOKhjqmjpg7mxaTaAbJz54qJ-FB6h76pOjDW0cZRauCDSMyGSBxGLvE5fhq6iLjTLkgI9QPHOSP7pM4Kt2__5KuIq5ggP1X2W2itSIxI-DP3LRjebT6aReCXenE5KEXc"/>
+</a>
+</div>
+</div>
+<div class="col-span-1">
+<h5 class="text-white font-bold mb-6 font-headline">Navegación</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Productos</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Servicios</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Obras</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-white font-bold mb-6 font-headline">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Shipping Info</a></li>
+<li><a class="text-slate-400 hover:text-white transition-colors text-sm" href="#">Technical Support</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-white font-bold mb-6 font-headline">Sede Central</h5>
+<address class="text-slate-400 text-sm not-italic space-y-4">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ff5500] text-sm" data-icon="location_on">location_on</span>
+                    Av. Santa Fe 1045, Lomas de Zamora
+                </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ff5500] text-sm" data-icon="call">call</span>
+                    +54 11 4242-4242
+                </p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#ff5500] text-sm" data-icon="mail">mail</span>
+                    ventas@sanyser.com.ar
+                </p>
+</address>
+</div>
+<div class="col-span-full border-t border-white/5 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs">
+<p>© 2024 SANYSER Industrial Supplies. All rights reserved.</p>
+<div class="flex items-center gap-6 mt-4 md:mt-0">
+<span>Designed with Precision</span>
+<span class="bg-[#ff5500]/20 text-[#ff5500] px-3 py-1 rounded-full font-bold">ARGENTINA</span>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl z-[100] hover:scale-110 transition-transform" href="#">
+<img alt="WhatsApp" class="w-8 h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44SdAJEbR6kVYlEH8H77iHnawTu2OPy7CI_yKpcRT6mBm7Zpus_1kEM4kO6d-XZyGZN0vAV7L0n68iv0OnPxrhxQuNyfDE749tswVUd4T4BSAS2QISrZbS0XV56kGWTyrfkQ0qWxK9H75rMyvSo83lhEsVXcZVOgtoDB2lwjReIiwZfqJL0GZ8bJ5O_6kWF4XTanwnWd2VXlaF8o9kZqDaARxpSN6HvnfrasQHbhcW94HzLncn8pOLKN2Gq6u4bkEL2-u0GgYE-Y"/>
+</a>
+</body></html>
