@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
 
           {/* Título */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-headline text-white leading-[0.9] tracking-tighter">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-headline text-white leading-[0.9] tracking-wide">
             Sanitarios para{' '}
             <br />
             <span className="text-primary-orange">tus obras.</span>
