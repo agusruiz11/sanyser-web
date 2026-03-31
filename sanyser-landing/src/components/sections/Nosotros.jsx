@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { nosotros } from '../../data/nosotros';
+import fotoLocal from '../../assets/bg/2025-11-29.webp';
 
 export default function Nosotros() {
   const sectionRef = useRef(null);
@@ -23,31 +24,18 @@ export default function Nosotros() {
 
   return (
     <section id="nosotros" className="py-24 bg-white" ref={sectionRef}>
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-2 gap-20 items-center">
 
           {/* Columna izquierda — imagen */}
           <div className="relative animate-on-scroll">
-            <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              {/*
-                Reemplazar este div por la imagen real del equipo/depósito:
-                <img src="/nosotros-equipo.jpg" alt="Equipo SANYSER" className="w-full h-full object-cover" />
-              */}
-              <div
-                className="w-full h-full flex items-center justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, #1e293b 0%, #334155 50%, #1e293b 100%)',
-                }}
-              >
-                <div className="text-center opacity-30">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="0.8" className="w-32 h-32 mx-auto mb-4">
-                    <rect x="3" y="9" width="18" height="13" rx="1"/>
-                    <path d="M8 22V12h8v10M1 9l11-7 11 7"/>
-                  </svg>
-                  <p className="text-white text-sm font-medium">Foto del depósito / equipo</p>
-                  <p className="text-white/60 text-xs">(reemplazar con imagen real)</p>
-                </div>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={fotoLocal}
+                alt="Local Sanyser"
+                loading="lazy"
+                className="w-full h-auto object-contain"
+              />
             </div>
 
             {/* Tarjeta flotante */}
@@ -60,7 +48,7 @@ export default function Nosotros() {
 
           {/* Columna derecha — texto + stats */}
           <div className="space-y-8 animate-on-scroll animate-on-scroll-delay-2">
-            <h2 className="text-5xl font-black font-headline text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-black font-headline text-slate-900 tracking-tight">
               Experiencia que construye confianza
             </h2>
 
@@ -68,7 +56,7 @@ export default function Nosotros() {
               {nosotros.descripcion}
             </p>
 
-            <div className="grid grid-cols-2 gap-8 pt-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6">
               {nosotros.stats.map((stat) => (
                 <div
                   key={stat.id}

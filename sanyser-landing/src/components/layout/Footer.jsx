@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
+import logo from '../../assets/LOGO.png';
 
 // Social icon SVGs inline (lucide-react no incluye íconos de RRSS en esta versión)
 const FacebookIcon = () => (
@@ -55,9 +56,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Col 1: Logo + descripción */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <span className="text-primary-orange font-bold text-2xl">SAN</span>
-              <span className="text-white font-bold text-2xl">YSER</span>
+            <div className="mb-4 inline-block bg-white rounded-xl px-4 py-2">
+              <img src={logo} alt="Sanyser" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Distribuidora especializada en materiales sanitarios para la construcción.

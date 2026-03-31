@@ -21,7 +21,7 @@ function MarcaBadge({ marca }) {
   const src = getLogoSrc(marca.logo);
 
   return (
-    <div className="group/badge flex-shrink-0 flex items-center justify-center w-44 h-24 rounded-xl bg-white/95 hover:bg-white border border-white/0 hover:border-primary-orange/40 shadow-sm hover:shadow-lg hover:shadow-primary-orange/10 transition-all duration-300 p-4 cursor-default overflow-hidden">
+    <div className="group/badge flex-shrink-0 flex items-center justify-center w-36 h-20 sm:w-44 sm:h-24 rounded-xl bg-white/95 hover:bg-white border border-white/0 hover:border-primary-orange/40 shadow-sm hover:shadow-lg hover:shadow-primary-orange/10 transition-all duration-300 p-3 sm:p-4 cursor-default overflow-hidden">
       {src ? (
         <img
           src={src}
@@ -60,7 +60,7 @@ export default function Marcas() {
     <section id="marcas" className="py-20 bg-primary-navy overflow-hidden">
 
       {/* Header */}
-      <div className="container mx-auto px-8 mb-12 text-center">
+      <div className="container mx-auto px-4 sm:px-8 mb-12 text-center">
         <p className="text-primary-orange font-bold uppercase tracking-[0.3em] text-sm font-headline mb-3">
           Aliados Estratégicos
         </p>

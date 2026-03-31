@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
+import logo from '../../assets/LOGO.png';
 
 const navLinks = [
   { label: 'Nosotros', href: '#nosotros' },
@@ -35,7 +36,7 @@ export default function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-primary-navy shadow-lg' : 'bg-primary-navy/95'
+          scrolled ? 'bg-white shadow-lg' : 'bg-white/95'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,14 +47,7 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, '#hero')}
               className="flex items-center gap-2 flex-shrink-0"
             >
-              <div className="flex items-center gap-1">
-                <span className="text-primary-orange font-bold text-2xl tracking-tight">SAN</span>
-                <span className="text-white font-bold text-2xl tracking-tight">YSER</span>
-              </div>
-              <div className="hidden sm:block w-px h-6 bg-white/20 mx-1" />
-              <span className="hidden sm:block text-white/60 text-xs uppercase tracking-wider leading-tight">
-                Materiales<br />Sanitarios
-              </span>
+              <img src={logo} alt="Sanyser" className="h-10 md:h-12 w-auto object-contain" />
             </a>
 
             {/* Desktop nav */}
@@ -63,7 +57,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-white/80 hover:text-white hover:text-primary-orange transition-colors duration-200 font-medium text-sm"
+                  className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-medium text-sm"
                 >
                   {link.label}
                 </a>
@@ -84,7 +78,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+                className="md:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100 transition-colors"
                 aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,18 +100,16 @@ export default function Navbar() {
 
         {/* Drawer */}
         <div
-          className={`fixed top-0 right-0 h-full w-72 bg-primary-navy z-50 md:hidden transform transition-transform duration-300 shadow-2xl ${
+          className={`fixed top-0 right-0 h-full w-[min(288px,calc(100vw-40px))] bg-white z-50 md:hidden transform transition-transform duration-300 shadow-2xl ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between p-6 border-b border-white/10">
-            <span className="text-white font-bold text-xl">
-              <span className="text-primary-orange">SAN</span>YSER
-            </span>
+          <div className="flex items-center justify-between p-6 border-b border-slate-200">
+            <img src={logo} alt="Sanyser" className="h-9 w-auto object-contain" />
             <button
               type="button"
               onClick={() => setMenuOpen(false)}
-              className="text-white p-1 hover:text-primary-orange transition-colors"
+              className="text-slate-700 p-1 hover:text-primary-orange transition-colors"
               aria-label="Cerrar menú"
             >
               <X size={24} />
@@ -130,7 +122,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-white/80 hover:text-primary-orange transition-colors duration-200 font-medium py-3 px-4 rounded-lg hover:bg-white/5 text-base"
+                className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-medium py-3 px-4 rounded-lg hover:bg-slate-50 text-base"
               >
                 {link.label}
               </a>

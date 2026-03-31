@@ -6,9 +6,9 @@ export default function Obras() {
 
   return (
     <section id="obras" className="py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-4 sm:px-8">
 
-        <h2 className="text-5xl font-black font-headline text-slate-900 mb-16">
+        <h2 className="text-3xl sm:text-5xl font-black font-headline text-slate-900 mb-16">
           Obras que nos respaldan
         </h2>
 
