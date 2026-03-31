@@ -57,7 +57,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-medium text-sm"
+                  className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-headline text-xl tracking-wide"
                 >
                   {link.label}
                 </a>
@@ -122,7 +122,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-medium py-3 px-4 rounded-lg hover:bg-slate-50 text-base"
+                className="text-slate-600 hover:text-primary-orange transition-colors duration-200 font-headline py-3 px-4 rounded-lg hover:bg-slate-50 text-xl tracking-wide"
               >
                 {link.label}
               </a>

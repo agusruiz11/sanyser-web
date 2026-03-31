@@ -2,6 +2,16 @@ import bg1 from '../../assets/bg/2025-11-29 (1).webp';
 import bg2 from '../../assets/bg/2025-11-29 (2).webp';
 import bg3 from '../../assets/bg/2025-11-29 (4).webp';
 import bg4 from '../../assets/bg/2025-11-29 (6).webp';
+import plumbing from '../../assets/bg/plumbing-iwn79cewneas3un5.jpg';
+
+function PrismDots() {
+  return (
+    <div
+      aria-hidden="true"
+      className="prism-dots absolute inset-0 pointer-events-none z-[1]"
+    />
+  );
+}
 
 const WHATSAPP_NUMBER = '5491171255054';
 const WHATSAPP_PRESUPUESTO = 'Hola, quiero pedir un presupuesto de materiales sanitarios.';
@@ -18,27 +28,21 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0F1E37]"
     >
-      {/* Overlay degradado: asegura legibilidad del texto en desktop */}
-      <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-r from-slate-900 via-slate-900/85 to-slate-900/30 hidden md:block" />
-      {/* Overlay sólido en mobile */}
-      <div className="absolute inset-0 z-0 pointer-events-none bg-slate-900/70 md:hidden" />
+      {/* Imagen plumbing de fondo */}
+      <img
+        src={plumbing}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
 
-      {/* Fotos de fondo visibles en desktop como collage */}
-      <div className="absolute inset-0 z-[-1] hidden md:grid grid-cols-2 grid-rows-2">
-        <img src={bg1} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <img src={bg2} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <img src={bg3} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-        <img src={bg4} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-      </div>
-      {/* Una sola foto de fondo en mobile */}
-      <div className="absolute inset-0 z-[-1] md:hidden">
-        <img src={bg4} alt="" className="w-full h-full object-cover" aria-hidden="true" />
-      </div>
+      {/* Overlay navy para tonificar y dar legibilidad */}
+      <div className="absolute inset-0 z-[1] pointer-events-none" style={{ backgroundColor: 'rgba(15, 30, 55, 0.85)' }} />
 
       {/* Contenido */}
-      <div className="container mx-auto px-4 sm:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center py-12">
+      <div className="container mx-auto px-4 sm:px-8 relative z-[2] grid md:grid-cols-2 gap-12 items-center py-12">
         <div className="space-y-8">
           {/* Eyebrow */}
           <div className="inline-block px-4 py-1 rounded-full bg-primary-orange/20 border border-primary-orange/30 text-orange-200 text-sm font-bold tracking-widest uppercase font-headline">
@@ -46,7 +50,7 @@ export default function Hero() {
           </div>
 
           {/* Título */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-headline text-white leading-[0.9] tracking-wide">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black font-headline text-white leading-[0.9] tracking-wide">
             Sanitarios para{' '}
             <br />
             <span className="text-primary-orange">tus obras.</span>
@@ -83,14 +87,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Collage visible solo en desktop — las fotos ya están en el fondo,
-            acá mostramos el grid con bordes/sombra para dar profundidad */}
+        {/* Collage visible solo en desktop */}
         <div className="hidden md:grid grid-cols-2 gap-3 h-[520px]">
           <img src={bg1} alt="Camión de entrega Sanyser" loading="eager" className="w-full h-full object-cover rounded-2xl shadow-2xl ring-1 ring-white/10" />
           <img src={bg2} alt="Showroom Sanyser" loading="eager" className="w-full h-full object-cover rounded-2xl shadow-2xl ring-1 ring-white/10" />
           <img src={bg3} alt="Depósito Sanyser" loading="eager" className="w-full h-full object-cover rounded-2xl shadow-2xl ring-1 ring-white/10" />
           <img src={bg4} alt="Local Sanyser" loading="eager" className="w-full h-full object-cover rounded-2xl shadow-2xl ring-1 ring-white/10" />
         </div>
+
       </div>
     </section>
   );

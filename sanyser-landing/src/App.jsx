@@ -19,11 +19,11 @@ export default function App() {
       <main>
         <Hero />
         <Nosotros />
-        <Productos />
         <Marcas />
+        <Productos />
         <Servicios />
-        <Obras />
-        <Testimonios />
+        {/* <Obras /> */}
+        {/* <Testimonios /> */}
         <Presupuesto />
         <FAQ />
       </main>

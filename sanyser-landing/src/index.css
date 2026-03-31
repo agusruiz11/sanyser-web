@@ -138,3 +138,25 @@
 .whatsapp-pulse {
   animation: whatsappPulse 2s infinite;
 }
+
+/* Hero — PrismDots background */
+@keyframes prismScroll {
+  from { background-position: 0px 0px,   14px 24px, 7px 12px; }
+  to   { background-position: 28px 48px, 42px 72px, 35px 60px; }
+}
+@keyframes prismHue {
+  0%   { filter: hue-rotate(-10deg) brightness(1);   }
+  50%  { filter: hue-rotate(40deg)  brightness(1.2); }
+  100% { filter: hue-rotate(-10deg) brightness(1);   }
+}
+
+.prism-dots {
+  background-image:
+    radial-gradient(circle, rgba(255, 85,  0, 0.55) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255, 150, 0, 0.35) 2.5px, transparent 2.5px),
+    radial-gradient(circle, rgba(255, 210, 80, 0.20) 2.5px, transparent 2.5px);
+  background-size: 28px 48px;
+  background-position: 0px 0px, 14px 24px, 7px 12px;
+  opacity: 0.3;
+  animation: prismScroll 26s linear infinite, prismHue 9s ease-in-out infinite;
+}

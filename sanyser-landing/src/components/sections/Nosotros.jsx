@@ -41,7 +41,7 @@ export default function Nosotros() {
             {/* Tarjeta flotante */}
             <div className="absolute -bottom-10 -right-10 bg-white p-8 rounded-2xl shadow-xl hidden lg:block max-w-xs border-t-4 border-primary-orange">
               <p className="text-slate-500 font-medium italic text-sm leading-relaxed">
-                "Comprometidos con la excelencia operativa y la entrega inmediata en cada punto del país."
+                "Aportamos un diferencial en servicio y asesoramiento técnico al mejor valor del mercado y con la agilidad que demandan los tiempos que corren"
               </p>
             </div>
           </div>
