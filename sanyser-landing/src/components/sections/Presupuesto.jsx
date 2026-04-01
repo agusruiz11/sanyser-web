@@ -228,9 +228,29 @@ export default function Presupuesto() {
                   <MapPin size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-sm">Dirección</div>
-                    <div className="text-white/70 text-sm">
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Av.+Santa+Fe+1045,+Lomas+de+Zamora,+Buenos+Aires,+Argentina"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-primary-orange text-sm transition-colors"
+                    >
                       Av. Santa Fe 1045, Lomas de Zamora<br />Buenos Aires, Argentina
-                    </div>
+                    </a>
+                  </div>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <MapPin size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-sm">Dirección</div>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Av.+San+Juan+4156,+Boedo,+CABA,+Argentina"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-primary-orange text-sm transition-colors"
+                    >
+                      Av. San Juan 4156, Boedo<br />CABA, Argentina
+                    </a>
                   </div>
                 </li>
 
@@ -241,8 +261,8 @@ export default function Presupuesto() {
                     <a href="tel:+541171255054" className="text-white/70 hover:text-primary-orange text-sm block transition-colors">
                       +54 11 7125-5054
                     </a>
-                    <a href="tel:+541171255054" className="text-white/70 hover:text-primary-orange text-sm block transition-colors">
-                      +54 11 7125-5054
+                    <a href="tel:+541128933560" className="text-white/70 hover:text-primary-orange text-sm block transition-colors">
+                      +54 9 11 2893-3560
                     </a>
                   </div>
                 </li>
@@ -251,8 +271,8 @@ export default function Presupuesto() {
                   <Mail size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-sm">Email</div>
-                    <a href="mailto:info@sanyser.com.ar" className="text-white/70 hover:text-primary-orange text-sm transition-colors">
-                      info@sanyser.com.ar
+                    <a href="mailto:obrassanyser@gmail.com" className="text-white/70 hover:text-primary-orange text-sm transition-colors">
+                      obrassanyser@gmail.com
                     </a>
                   </div>
                 </li>

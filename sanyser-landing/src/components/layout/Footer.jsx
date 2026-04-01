@@ -130,17 +130,27 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary-orange mt-0.5 flex-shrink-0" />
-                <span className="text-white/60 text-sm">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Av.+Santa+Fe+1045,+Lomas+de+Zamora,+Buenos+Aires,+Argentina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-primary-orange transition-colors text-sm"
+                >
                   Av. Santa Fe 1045<br />
                   Lomas de Zamora, Buenos Aires.
-                </span>
+                </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary-orange mt-0.5 flex-shrink-0" />
-                <span className="text-white/60 text-sm">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Av.+San+Juan+4156,+Boedo,+CABA,+Argentina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/60 hover:text-primary-orange transition-colors text-sm"
+                >
                   Av. San Juan 4156<br />
                   CABA.
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-orange flex-shrink-0" />
