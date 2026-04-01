@@ -1,3 +1,4 @@
+import { useLenis } from './hooks/useLenis';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import WhatsAppButton from './components/layout/WhatsAppButton';
@@ -12,6 +13,8 @@ import Presupuesto from './components/sections/Presupuesto';
 import FAQ from './components/sections/FAQ';
 
 export default function App() {
+  useLenis();
+
   return (
     <div className="font-sans">
       <Navbar />

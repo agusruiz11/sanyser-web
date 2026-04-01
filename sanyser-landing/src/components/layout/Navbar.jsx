@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Productos', href: '#productos' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Obras', href: '#obras' },
-  { label: 'Contacto', href: '#presupuesto' },
+  // { label: 'Contacto', href: '#presupuesto' },
 ];
 
 export default function Navbar() {
@@ -69,10 +69,10 @@ export default function Navbar() {
               <Button
                 href="#presupuesto"
                 onClick={(e) => handleNavClick(e, '#presupuesto')}
-                size="sm"
-                className="hidden md:inline-flex"
+                size="md"
+                className="hidden md:inline-flex font-headline tracking-widest text-[1.2rem]"
               >
-                Pedí tu presupuesto
+                CONTACTO
               </Button>
 
               <button
@@ -132,9 +132,10 @@ export default function Navbar() {
               <Button
                 href="#presupuesto"
                 onClick={(e) => handleNavClick(e, '#presupuesto')}
-                className="w-full"
+                size="lg"
+                className="w-full font-headline tracking-widest text-[1.2rem]"
               >
-                Pedí tu presupuesto
+                CONTACTO
               </Button>
             </div>
           </div>
