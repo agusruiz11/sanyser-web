@@ -45,7 +45,7 @@ export default function Servicios() {
   return (
     <section
       id="servicios"
-      className="py-20 md:py-28 bg-primary-navy"
+      className="py-10 md:py-10 bg-primary-navy"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +53,7 @@ export default function Servicios() {
           <SectionTitle
             eyebrow="Lo que hacemos"
             title="Nuestros servicios"
-            subtitle="Más allá de los materiales, aportamos conocimiento técnico y soluciones reales para cada etapa de tu proyecto."
+            subtitle="MATERIALES + ASESORAMIENTO TÉNICO = SOLUCIÓN INTEGRAL"
             light
           />
         </div>
@@ -75,14 +75,12 @@ export default function Servicios() {
                   />
                 </div>
 
-                <h3 className="font-bold text-white text-lg mb-3">
+                <h3 className="text-white text-2xl mb-3 tracking-wide">
                   {servicio.titulo}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed mb-5">
-                  {servicio.descripcion}
-                </p>
+                <p className="text-white/60 text-sm leading-relaxed mb-5" dangerouslySetInnerHTML={{ __html: servicio.descripcion }} />
 
-                <a
+                {/* <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
                     `Hola, quiero más información sobre el servicio de ${servicio.titulo}.`
                   )}`}
@@ -95,7 +93,7 @@ export default function Servicios() {
                     size={16}
                     className="transition-transform duration-200 group-hover/link:translate-x-1"
                   />
-                </a>
+                </a> */}
               </div>
             );
           })}

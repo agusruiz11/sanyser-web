@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { Truck, Package, Clock, Star, Award, Shield, Wrench, Phone } from 'lucide-react';
+
+// Mapa de íconos disponibles para los stats — agregá más si los usás en nosotros.js
+const ICONS = { Truck, Package, Clock, Star, Award, Shield, Wrench, Phone };
 import { nosotros } from '../../data/nosotros';
 import fotoLocal from '../../assets/bg/2025-11-29.webp';
 
@@ -23,7 +27,7 @@ export default function Nosotros() {
   }, []);
 
   return (
-    <section id="nosotros" className="py-24 bg-white" ref={sectionRef}>
+    <section id="nosotros" className="py-24 bg-gray-light" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-8">
         <div className="grid md:grid-cols-2 gap-20 items-center">
 
@@ -48,13 +52,11 @@ export default function Nosotros() {
 
           {/* Columna derecha — texto + stats */}
           <div className="space-y-8 animate-on-scroll animate-on-scroll-delay-2">
-            <h2 className="text-3xl sm:text-5xl font-black font-headline text-slate-900 tracking-tight">
+            <h2 className="text-3xl sm:text-5xl font-black font-headline text-slate-900 tracking-wide">
               Experiencia que construye confianza
             </h2>
 
-            <p className="text-lg text-slate-500 leading-relaxed">
-              {nosotros.descripcion}
-            </p>
+            <p className="text-lg text-slate-500 leading-relaxed" dangerouslySetInnerHTML={{ __html: nosotros.descripcion }} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6">
               {nosotros.stats.map((stat) => (
@@ -67,7 +69,9 @@ export default function Nosotros() {
                   }`}
                 >
                   <div className="text-4xl font-black font-headline text-slate-900">
-                    {stat.valor}
+                    {stat.icono
+                      ? (() => { const Icon = ICONS[stat.icono]; return Icon ? <Icon size={40} strokeWidth={1.5} color="#FF5500" /> : stat.valor; })()
+                      : stat.valor}
                   </div>
                   <div className="text-slate-400 font-bold uppercase tracking-widest text-xs mt-1">
                     {stat.etiqueta}

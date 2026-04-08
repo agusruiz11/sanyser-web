@@ -60,8 +60,7 @@ export default function Footer() {
               <img src={logo} alt="Sanyser" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Distribuidora especializada en materiales sanitarios para la construcción.
-              Más de 25 marcas líderes, ingeniería propia y logística inmediata en todo el país.
+              Sanitarios para tus obras, <br/> servicios que las potencian.
             </p>
             <div className="flex items-center gap-4">
               {/* <a
@@ -90,7 +89,7 @@ export default function Footer() {
 
           {/* Col 2: Links rápidos */}
           <div>
-            <h4 className="font-bold text-white text-base mb-5 uppercase tracking-wide">
+            <h4 className="font-bold text-white mb-5 uppercase tracking-wider text-xl">
               Links rápidos
             </h4>
             <ul className="space-y-3">
@@ -110,7 +109,7 @@ export default function Footer() {
 
           {/* Col 3: Servicios */}
           <div>
-            <h4 className="font-bold text-white text-base mb-5 uppercase tracking-wide">
+            <h4 className="font-bold text-white text-base mb-5 uppercase tracking-wider text-xl">
               Servicios
             </h4>
             <ul className="space-y-3">
@@ -124,7 +123,7 @@ export default function Footer() {
 
           {/* Col 4: Contacto */}
           <div>
-            <h4 className="font-bold text-white text-base mb-5 uppercase tracking-wide">
+            <h4 className="font-bold text-white text-base mb-5 uppercase tracking-wider text-xl">
               Contacto
             </h4>
             <ul className="space-y-4">
@@ -138,18 +137,6 @@ export default function Footer() {
                 >
                   Av. Santa Fe 1045<br />
                   Lomas de Zamora, Buenos Aires.
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-primary-orange mt-0.5 flex-shrink-0" />
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Av.+San+Juan+4156,+Boedo,+CABA,+Argentina"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/60 hover:text-primary-orange transition-colors text-sm"
-                >
-                  Av. San Juan 4156<br />
-                  CABA.
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -167,7 +154,7 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary-orange flex-shrink-0" />
                 <a href="mailto:obrassanyser@gmail.com" className="text-white/60 hover:text-primary-orange transition-colors text-sm">
-                  obrassanyser@gmail.com
+                  obras@sanyser.com.ar
                 </a>
               </li>
             </ul>

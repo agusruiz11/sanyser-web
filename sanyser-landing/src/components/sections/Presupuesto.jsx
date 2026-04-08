@@ -4,11 +4,8 @@ import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
 
 const tiposDeObra = [
-  'Edificio residencial',
-  'Casa unifamiliar',
-  'Comercio / Industria',
-  'Refacción',
-  'Obra pública',
+  'Obras',
+  'Instaladores',
   'Otro',
 ];
 
@@ -218,7 +215,8 @@ export default function Presupuesto() {
                 <Clock size={24} className="text-primary-orange" />
                 <div>
                   <div className="font-bold">Respondemos en menos de 24 hs</div>
-                  <div className="text-white/60 text-sm">Lunes a viernes, 8:00 a 17:00 hs</div>
+                  <div className="text-white/60 text-sm">Lunes a viernes de 8:00 a 18:00 hs</div>
+                  <div className="text-white/60 text-sm">Sábados de 8:00 a 13:00 hs</div>
                 </div>
               </div>
               <div className="h-px bg-white/10 my-4" />
@@ -240,26 +238,11 @@ export default function Presupuesto() {
                 </li>
 
                 <li className="flex items-start gap-3">
-                  <MapPin size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-sm">Dirección</div>
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=Av.+San+Juan+4156,+Boedo,+CABA,+Argentina"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/70 hover:text-primary-orange text-sm transition-colors"
-                    >
-                      Av. San Juan 4156, Boedo<br />CABA, Argentina
-                    </a>
-                  </div>
-                </li>
-
-                <li className="flex items-start gap-3">
                   <Phone size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-sm">Teléfonos</div>
                     <a href="tel:+541171255054" className="text-white/70 hover:text-primary-orange text-sm block transition-colors">
-                      +54 11 7125-5054
+                      +54 9 11 7125-5054
                     </a>
                     <a href="tel:+541128933560" className="text-white/70 hover:text-primary-orange text-sm block transition-colors">
                       +54 9 11 2893-3560
@@ -271,8 +254,8 @@ export default function Presupuesto() {
                   <Mail size={20} className="text-primary-orange mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-sm">Email</div>
-                    <a href="mailto:obrassanyser@gmail.com" className="text-white/70 hover:text-primary-orange text-sm transition-colors">
-                      obrassanyser@gmail.com
+                    <a href="mailto:obras@sanyser.com.ar" className="text-white/70 hover:text-primary-orange text-sm transition-colors">
+                      obras@sanyser.com.ar
                     </a>
                   </div>
                 </li>

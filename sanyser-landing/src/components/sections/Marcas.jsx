@@ -20,21 +20,29 @@ const row2 = marcas.filter((_, i) => i % 2 !== 0);  // índices 1,3,5… → 12 
 function MarcaBadge({ marca }) {
   const src = getLogoSrc(marca.logo);
 
-  return (
-    <div className="group/badge flex-shrink-0 flex items-center justify-center w-36 h-20 sm:w-44 sm:h-24 rounded-xl bg-white/95 hover:bg-white border border-white/0 hover:border-primary-orange/40 shadow-sm hover:shadow-lg hover:shadow-primary-orange/10 transition-all duration-300 p-3 sm:p-4 cursor-default overflow-hidden">
-      {src ? (
-        <img
-          src={src}
-          alt={marca.nombre}
-          loading="lazy"
-          className="w-full h-full object-contain transition-transform duration-300 group-hover/badge:scale-105"
-        />
-      ) : (
-        /* Fallback texto para marcas sin logo todavía (Awaduct, FusioGas) */
-        <span className="text-slate-600 group-hover/badge:text-primary-navy font-headline font-bold text-xs uppercase tracking-wider text-center leading-tight transition-colors duration-300">
-          {marca.nombre}
-        </span>
-      )}
+  const inner = src ? (
+    <img
+      src={src}
+      alt={marca.nombre}
+      loading="lazy"
+      className="w-full h-full object-contain transition-transform duration-300 group-hover/badge:scale-105"
+    />
+  ) : (
+    /* Fallback texto para marcas sin logo todavía */
+    <span className="text-slate-600 group-hover/badge:text-primary-navy font-headline font-bold text-xs uppercase tracking-wider text-center leading-tight transition-colors duration-300">
+      {marca.nombre}
+    </span>
+  );
+
+  const className = "group/badge flex-shrink-0 flex items-center justify-center w-36 h-20 sm:w-44 sm:h-24 transition-all duration-300 p-3 sm:p-4 overflow-hidden";
+
+  return marca.href ? (
+    <a href={marca.href} target="_blank" rel="noopener noreferrer" className={className} title={marca.nombre}>
+      {inner}
+    </a>
+  ) : (
+    <div className={`${className} cursor-default`}>
+      {inner}
     </div>
   );
 }
@@ -57,30 +65,30 @@ function MarqueeRow({ items, reverse = false }) {
 
 export default function Marcas() {
   return (
-    <section id="marcas" className="py-20 bg-primary-navy overflow-hidden">
+    <section id="marcas" className="py-20 bg-white overflow-hidden">
 
       {/* Header */}
       <div className="container mx-auto px-4 sm:px-8 mb-12 text-center">
-        <p className="text-primary-orange font-bold uppercase tracking-[0.3em] text-sm font-headline mb-3">
+        <p className="text-primary-orange font-bold uppercase tracking-[0.3em] text-2xl font-headline mb-3">
           Aliados Estratégicos
         </p>
-        <h2 className="text-4xl md:text-5xl font-black font-headline text-white tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-black font-headline text-primary-navy tracking-wide">
           25+ marcas líderes del mercado
         </h2>
-        <p className="text-slate-400 mt-3 max-w-xl mx-auto text-base">
+        <p className="text-slate-500 mt-3 max-w-xl mx-auto text-base">
           Distribuidores oficiales de los fabricantes más reconocidos del rubro sanitario e industrial.
         </p>
       </div>
 
-      <div className="border-t border-white/10 mb-10" />
+      {/* <div className="border-t border-slate-200" /> */}
 
       {/* Filas del carousel — velocidades distintas para efecto orgánico */}
-      <div className="space-y-5">
+      <div className="bg-white py-10 space-y-5">
         <MarqueeRow items={row1} reverse={false} />
         <MarqueeRow items={row2} reverse={true} />
       </div>
 
-      <div className="border-b border-white/10 mt-10" />
+      {/* <div className="border-b border-slate-200" /> */}
 
     </section>
   );

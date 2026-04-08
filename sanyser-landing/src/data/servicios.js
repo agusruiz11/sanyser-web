@@ -3,7 +3,7 @@ export const servicios = [
     id: 1,
     icono: 'MessageSquare',
     titulo: 'Asesoramiento Técnico',
-    descripcion: 'Nuestro equipo de ingenieros y técnicos te acompaña en la elección de materiales y soluciones óptimas para cada tipo de obra.',
+    descripcion: 'Nuestro equipo de <strong class="text-primary-orange font-bold">profesionales</strong> te acompaña en la elección de materiales y soluciones óptimas para cada tipo de obra.',
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const servicios = [
     id: 3,
     icono: 'Wrench',
     titulo: 'Fabricación de Colectores',
-    descripcion: 'Fabricamos colectores sanitarios y de calefacción a medida, con materiales de primera calidad y tiempos de entrega ajustados a tu cronograma de obra.',
+    descripcion: 'Fabricamos colectores sanitarios a medida en acero inoxidable y polipropileno con tiempos de entrega ajustados a tu cronograma de obra.',
   },
   {
     id: 4,

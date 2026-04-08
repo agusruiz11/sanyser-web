@@ -47,7 +47,7 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, '#hero')}
               className="flex items-center gap-2 flex-shrink-0"
             >
-              <img src={logo} alt="Sanyser" className="h-10 md:h-12 w-auto object-contain" />
+              <img src={logo} alt="Sanyser" className="h-16 md:h-20 w-auto object-contain" />
             </a>
 
             {/* Desktop nav */}
@@ -105,7 +105,7 @@ export default function Navbar() {
           }`}
         >
           <div className="flex items-center justify-between p-6 border-b border-slate-200">
-            <img src={logo} alt="Sanyser" className="h-9 w-auto object-contain" />
+            <img src={logo} alt="Sanyser" className="h-16 md:h-20 w-auto object-contain" />
             <button
               type="button"
               onClick={() => setMenuOpen(false)}
