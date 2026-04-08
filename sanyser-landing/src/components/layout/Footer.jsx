@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
 import logo from '../../assets/LOGO.png';
+import logoPosicionarte from '../../assets/logoPosicionarteOnline.png';
 
 // Social icon SVGs inline (lucide-react no incluye íconos de RRSS en esta versión)
 const FacebookIcon = () => (
@@ -164,13 +165,20 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-center gap-4 flex-wrap">
           <p className="text-white/40 text-sm">
             © 2026 SANYSER. Todos los derechos reservados.
           </p>
-          <p className="text-white/40 text-xs">
-            Lomas de Zamora, Buenos Aires, Argentina
-          </p>
+          <span className="text-white/20 text-sm">·</span>
+          <a
+            href="https://posicionarte.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition-opacity duration-300"
+          >
+            <span className="text-white/40 text-sm">Diseño web</span>
+            <img src={logoPosicionarte} alt="Posicionarte Online" className="opacity-40 hover:opacity-90 h-8 w-auto object-contain" />
+          </a>
         </div>
       </div>
     </footer>
