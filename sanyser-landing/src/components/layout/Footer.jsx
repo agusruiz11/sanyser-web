@@ -24,11 +24,11 @@ const LinkedinIcon = () => (
 );
 
 const quickLinks = [
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Productos', href: '#productos' },
-  { label: 'Marcas', href: '#marcas' },
   { label: 'Servicios', href: '#servicios' },
-  // { label: 'Obras', href: '#obras' },
+  { label: 'Marcas', href: '#marcas' },
+  { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Obras', href: '#obras' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contacto', href: '#presupuesto' },
 ];
 

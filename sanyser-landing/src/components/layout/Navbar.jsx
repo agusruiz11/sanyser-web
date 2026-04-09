@@ -4,11 +4,11 @@ import Button from '../ui/Button';
 import logo from '../../assets/LOGO.png';
 
 const navLinks = [
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Productos', href: '#productos' },
   { label: 'Servicios', href: '#servicios' },
+  { label: 'Marcas', href: '#marcas' },
+  { label: 'Nosotros', href: '#nosotros' },
   { label: 'Obras', href: '#obras' },
-  // { label: 'Contacto', href: '#presupuesto' },
+  { label: 'FAQ', href: '#faq' },
 ];
 
 export default function Navbar() {

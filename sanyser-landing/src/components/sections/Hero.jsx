@@ -86,7 +86,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#0F1E37]"
+      className="relative min-h-screen flex items-center pt-20 overflow-x-clip bg-[#0F1E37]"
     >
       {/* Imagen plumbing de fondo */}
       <img
@@ -103,50 +103,45 @@ export default function Hero() {
       <PipeBackground />
 
       {/* Contenido */}
-      <div className="container mx-auto px-4 sm:px-8 relative z-[3] grid md:grid-cols-2 gap-12 items-center py-12">
-        <div className="space-y-8">
-          {/* Título */}
-          <h1 ref={headingRef} className="text-7xl sm:text-6xl md:text-7xl font-black font-headline text-white leading-[0.9] tracking-wide">
-            Sanitarios para tus obras,{' '}
-            <br />
-            <span className="text-primary-orange">servicios que las potencian.</span>
-          </h1>
+      <div className="relative z-[3] w-full grid md:grid-cols-2 self-stretch">
+        {/* Columna texto */}
+        <div className="flex items-center px-6 sm:px-10 lg:px-16 xl:px-24 py-8 md:py-10 min-h-[50vh] md:min-h-0">
+          <div className="space-y-4 md:space-y-5 lg:space-y-7 w-full">
+            {/* Título */}
+            <h1 ref={headingRef} className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-black font-headline text-white leading-[0.9] tracking-wide">
+              Sanitarios para tus obras,{' '}
+              <br />
+              <span className="text-primary-orange">servicios que las potencian.</span>
+            </h1>
 
-          {/* Subtítulo */}
-          <p ref={subtitleRef} className="text-xl text-slate-300 max-w-lg font-light leading-relaxed">
-            Proveemos
-            soluciones integrales de alta ingeniería para el mercado de la
-            construcción en Argentina.
-          </p>
+            {/* Subtítulo */}
+            <p ref={subtitleRef} className="text-lg lg:text-xl text-slate-300 max-w-lg font-light leading-relaxed">
+              Proveemos
+              soluciones integrales de alta ingeniería para el mercado de la
+              construcción en Argentina.
+            </p>
 
-          {/* CTAs */}
-          <div ref={ctasRef} className="flex flex-wrap gap-4 pt-4">
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_PRESUPUESTO)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary-orange text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold font-headline text-base sm:text-lg hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] transition-all flex items-center gap-2"
-            >
-              Pedí tu presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-
-            <button
-              type="button"
-              onClick={handleCatalogo}
-              className="border border-slate-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold font-headline text-base sm:text-lg hover:bg-white/10 transition-all"
-            >
-              Ver catálogo
-            </button>
+            {/* CTAs */}
+            <div ref={ctasRef} className="flex flex-wrap gap-4 pt-2">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_PRESUPUESTO)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-orange text-white px-6 sm:px-8 py-3 rounded-xl font-bold font-headline text-base sm:text-lg hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] transition-all flex items-center gap-2"
+              >
+                Pedí tu presupuesto
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Slideshow visible solo en desktop */}
+        {/* Slideshow: mitad derecha en desktop, mitad inferior en mobile */}
         <div
           ref={slideshowRef}
-          className="hidden md:block relative h-[520px] overflow-hidden shadow-2xl ring-1 ring-white/10"
+          className="relative overflow-hidden min-h-[45vh] md:min-h-0"
         >
           {SLIDES.map((slide, i) => (
             <img
