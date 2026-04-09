@@ -127,7 +127,7 @@ export default function Hero() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_PRESUPUESTO)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-orange text-white px-6 sm:px-8 py-3 rounded-xl font-bold font-headline text-base sm:text-lg hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] transition-all flex items-center gap-2"
+                className="tracking-wider bg-primary-orange text-white px-6 sm:px-8 py-3 rounded-xl font-bold font-headline text-base sm:text-lg hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] transition-all flex items-center gap-2"
               >
                 Pedí tu presupuesto
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">

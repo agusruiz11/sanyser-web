@@ -27,7 +27,7 @@ export const servicios = [
     id: 5,
     icono: 'Truck',
     titulo: 'Logística Inmediata',
-    descripcion: 'Stock permanente y despacho ágil a todo el país. Coordinamos entregas directas a obra para que nunca te falten los materiales en el momento clave.',
+    descripcion: 'Stock variado y permanente para lograr despachos ágiles. Coordinamos entregas para que nunca te falten los materiales en el momento clave.',
   },
   {
     id: 6,

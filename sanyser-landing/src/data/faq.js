@@ -27,7 +27,7 @@ export const faq = [
     id: 5,
     pregunta: '¿Puedo visitar el showroom o el depósito?',
     respuesta:
-      'Por supuesto. Estamos en Lomas de Zamora, Buenos Aires. Podés visitarnos de lunes a viernes de 8:00 a 17:00 hs. Te recomendamos coordinar visita con anticipación para que te atendamos con el tiempo que tu consulta merece.',
+      'Por supuesto. Estamos en Lomas de Zamora, Buenos Aires. Podés visitarnos de lunes a viernes de 8:00 a 18:00 hs y los días sábados de 8:00 a 13:00 hs. Te recomendamos coordinar visita con anticipación para que te atendamos con el tiempo que tu consulta merece.',
   },
   // {
   //   id: 6,

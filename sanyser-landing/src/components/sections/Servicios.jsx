@@ -53,7 +53,7 @@ export default function Servicios() {
           <SectionTitle
             eyebrow="Lo que hacemos"
             title="Nuestros servicios"
-            subtitle="MATERIALES + ASESORAMIENTO TÉNICO = SOLUCIÓN INTEGRAL"
+            subtitle="MATERIALES + ASESORAMIENTO TÉCNICO = SOLUCIÓN INTEGRAL"
             light
           />
         </div>
