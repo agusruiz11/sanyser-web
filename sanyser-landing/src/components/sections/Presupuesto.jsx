@@ -1,7 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import SectionTitle from '../ui/SectionTitle';
 import Button from '../ui/Button';
+
+const EMAILJS_SERVICE_ID = 'service_vilwijw';
+const EMAILJS_TEMPLATE_ID = 'template_s8o3gt9';
+const EMAILJS_PUBLIC_KEY = '8l9SpzBQGgk7wjEWK';
 
 const tiposDeObra = [
   'Obras',
@@ -21,6 +26,8 @@ export default function Presupuesto() {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -70,13 +77,28 @@ export default function Presupuesto() {
       return;
     }
 
-    // TODO: conectar con endpoint de backend o servicio de formularios (ej: Formspree, EmailJS, API propia)
-    // Ejemplo con fetch:
-    // fetch('/api/presupuesto', { method: 'POST', body: JSON.stringify(form), headers: { 'Content-Type': 'application/json' } })
-    console.log('Formulario enviado:', form);
+    setSending(true);
+    setSendError(false);
 
-    setSubmitted(true);
-    setForm(initialForm);
+    emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      {
+        nombre: form.nombre,
+        telefono: form.telefono,
+        email: form.email,
+        tipoObra: form.tipoObra,
+        detalle: form.detalle,
+      },
+      EMAILJS_PUBLIC_KEY
+    ).then(() => {
+      setSubmitted(true);
+      setForm(initialForm);
+    }).catch(() => {
+      setSendError(true);
+    }).finally(() => {
+      setSending(false);
+    });
   };
 
   const inputBase =
@@ -199,9 +221,14 @@ export default function Presupuesto() {
                   {errors.detalle && <p className="text-red-500 text-xs mt-1">{errors.detalle}</p>}
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                {sendError && (
+                  <p className="text-red-500 text-sm text-center">
+                    Hubo un error al enviar. Intentá de nuevo o escribinos a obras@sanyser.com.ar
+                  </p>
+                )}
+                <Button type="submit" size="lg" className="w-full" disabled={sending}>
                   <Send size={18} />
-                  Enviar consulta
+                  {sending ? 'Enviando...' : 'Enviar consulta'}
                 </Button>
               </form>
             )}
