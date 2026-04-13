@@ -33,12 +33,12 @@ const quickLinks = [
 ];
 
 const serviceLinks = [
-  'Asesoramiento Técnico',
-  'Proyectos Sanitarios',
-  'Fabricación de Colectores',
-  'Capacitación Profesional',
-  'Logística Inmediata',
-  'Asistencia a Obra',
+  { label: 'Asesoramiento Técnico', href: '#servicios' },
+  { label: 'Proyectos Sanitarios', href: '#servicios' },
+  { label: 'Fabricación de Colectores', href: '#servicios' },
+  { label: 'Capacitación Profesional', href: '#servicios' },
+  { label: 'Logística Inmediata', href: '#servicios' },
+  { label: 'Asistencia a Obra', href: '#servicios' },
 ];
 
 export default function Footer() {
@@ -115,8 +115,14 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {serviceLinks.map((s) => (
-                <li key={s}>
-                  <span className="text-white/60 text-sm">{s}</span>
+                <li key={s.label}>
+                  <a
+                    href={s.href}
+                    onClick={(e) => handleNavClick(e, s.href)}
+                    className="text-white/60 hover:text-primary-orange transition-colors duration-200 text-sm"
+                  >
+                    {s.label}
+                  </a>
                 </li>
               ))}
             </ul>

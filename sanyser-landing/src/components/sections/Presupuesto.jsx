@@ -146,6 +146,7 @@ export default function Presupuesto() {
                     value={form.nombre}
                     onChange={handleChange}
                     placeholder="Ej: Juan Pérez"
+                    autoComplete="name"
                     className={`${inputBase} ${errors.nombre ? errorClass : normalClass}`}
                   />
                   {errors.nombre && <p className="text-red-500 text-xs mt-1">{errors.nombre}</p>}
@@ -163,6 +164,7 @@ export default function Presupuesto() {
                       value={form.telefono}
                       onChange={handleChange}
                       placeholder="Ej: 11 1234-5678"
+                      autoComplete="tel"
                       className={`${inputBase} ${errors.telefono ? errorClass : normalClass}`}
                     />
                     {errors.telefono && <p className="text-red-500 text-xs mt-1">{errors.telefono}</p>}
@@ -178,6 +180,7 @@ export default function Presupuesto() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="tu@email.com"
+                      autoComplete="email"
                       className={`${inputBase} ${errors.email ? errorClass : normalClass}`}
                     />
                     {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}

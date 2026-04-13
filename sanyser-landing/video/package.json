@@ -1,0 +1,24 @@
+{
+  "name": "sanyser-video",
+  "version": "1.0.0",
+  "description": "Video promocional Sanyser — generado con Remotion",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx SanyserVideo out/sanyser-promo.mp4",
+    "render:still": "remotion still src/index.jsx SanyserVideo --frame=0 out/preview.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12"
+  },
+  "remotion": {
+    "entryPoint": "./src/index.jsx"
+  }
+}
