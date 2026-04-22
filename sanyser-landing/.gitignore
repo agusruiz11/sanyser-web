@@ -21,6 +21,4 @@ node_modules
 *.sln
 *.sw?
 
-#dist
-dist/
-sanyser-landing/dist/
+# dist is tracked for git subtree deploy workflow
