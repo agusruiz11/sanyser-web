@@ -12,7 +12,12 @@
       "WebFetch(domain:framerusercontent.com)",
       "Bash(npx skills *)",
       "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index",
-      "mcp__plugin_context-mode_context-mode__ctx_batch_execute"
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "Bash(mv \"Dropped Image \\(2\\).png\"  \"sigas-logo.png\")",
+      "Bash(mv \"Dropped Image \\(3\\).png\"  \"rheem-logo.png\")",
+      "Bash(mv \"Dropped Image \\(4\\).png\"  \"genebre-logo.png\")",
+      "Bash(mv \"Dropped Image \\(5\\).png\"  \"pedrollo-logo.png\")",
+      "Bash(mv \"Dropped Image.png\"      \"hidroflex-logo.png\")"
     ]
   }
 }
