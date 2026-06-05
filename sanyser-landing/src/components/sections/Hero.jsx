@@ -93,6 +93,9 @@ export default function Hero() {
         src={plumbing}
         alt=""
         aria-hidden="true"
+        fetchpriority="high"
+        loading="eager"
+        decoding="sync"
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 

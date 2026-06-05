@@ -8,9 +8,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          react:  ['react', 'react-dom'],
-          gsap:   ['gsap'],
-          lucide: ['lucide-react'],
+          react:          ['react', 'react-dom'],
+          gsap:           ['gsap'],
+          lucide:         ['lucide-react'],
+          'framer-motion': ['framer-motion'],
+          lenis:          ['lenis'],
+          emailjs:        ['@emailjs/browser'],
         },
       },
     },
