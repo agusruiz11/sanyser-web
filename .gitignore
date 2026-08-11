@@ -1,0 +1,48 @@
+# Unico .gitignore del repo: aplica a la raiz y a todo lo que cuelga de ella.
+
+# Dependencias
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Config de Claude Code. El .claude de la raiz es scratch de sesion (acumula
+# permisos con rutas absolutas de la maquina) y este repo es publico: fuera.
+# El de sanyser-landing SI se versiona porque tiene las skills de GSAP, pero
+# sus settings locales no.
+/.claude/
+**/.claude/settings.local.json
+**/.claude/*.tmp.*
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.sw?
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- marketing -------------------------------------------------------------
+# Placas generadas: salen de `node render.js`, no hace falta versionarlas.
+sanyser-landing/marketing/out/
+
+# Material recibido del disenador (~21 MB de PNG). Vive en Google Drive;
+# git no es el lugar para archivarlo. Para conservar una entrega puntual,
+# se fuerza con `git add -f`.
+sanyser-landing/marketing/recibido/
+sanyser-landing/marketing/2026-*/
+
+# Se versionan a proposito: marketing/fonts/*.woff2 (148 KB) hacen que el
+# render sea offline y siempre identico.
+
+# --- sitio -----------------------------------------------------------------
+# sanyser-landing/dist NO se ignora: se trackea a proposito para el deploy
+# via git subtree a Hostinger. Ver docs/despliegue-hostinger.md
+*.local
