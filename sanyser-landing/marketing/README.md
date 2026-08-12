@@ -30,6 +30,15 @@ que ya está instalado en `sanyser-landing/node_modules`.
 | `cierre` | CTA final + logo | `titulo`, `cta`, `web` |
 
 `fondo` acepta `navy`, `naranja`, `claro` (default) o `blanco`.
+
+Cuando una placa lleva `foto`, hay tres perillas para que el texto no le tape el
+motivo — sirven para cualquier layout con imagen:
+
+| Campo | Qué hace |
+|---|---|
+| `foco` | Reencuadra la foto (`background-position`). `'center 82%'` corre el recorte hacia abajo y sube el motivo. |
+| `anclaje: 'abajo'` | Apoya el bloque de texto contra el pie en vez de centrarlo. |
+| `tituloChico: true` | Titular y bajada más compactos, para dejar respirar la imagen. |
 Los campos `destacado`, `remate`, `cta` e `items` admiten `<strong>`.
 
 ## Reglas de marca
@@ -49,8 +58,33 @@ Nunca una tercera tipografía.
 | Gris claro | `#F5F5F5` | Fondo por defecto |
 | Gris texto | `#333333` | Cuerpo sobre fondo claro |
 
+**Rotación de portadas**
+
+La grilla del perfil se arma con las slides 1. Si todas abren igual, el feed
+se ve monótono; si cada una abre distinto por gusto del día, volvemos a la
+deriva. Por eso la tapa rota sobre un ciclo fijo de cuatro:
+
+| # | `fondo` | Extra |
+|---|---|---|
+| A | `navy` | + `foto` de obra propia |
+| B | `naranja` | plano, sin foto |
+| C | `claro` | puramente tipográfico |
+| D | `naranja` | + `foto` (velo naranja) |
+| E | `navy` | plano, sin foto |
+
+Usados: C3 → A · C4 → A · C5 → B · C6 → C · C7 → D. El próximo va en E.
+La regla mínima es **no repetir el tratamiento de la tapa anterior**.
+
+Fondo claro + foto no está en la lista a propósito: para que el texto se lea
+sobre un velo claro hay que subirlo tanto que la foto deja de verse.
+
+**Los interiores no rotan**: mantienen el mismo sistema siempre. La variedad va
+en la tapa; la consistencia, adentro.
+
 **Layout**
 - Margen de seguridad: 88px en los cuatro lados. Nada de contenido cortado por el borde.
+- Interlineado de Bebas Neue nunca por debajo de `0.96`: la fuente no deja aire
+  sobre las mayúsculas acentuadas y las tildes chocan con la línea de arriba.
 - Logo arriba a la izquierda, 44px de alto, en todas las slides menos la de cierre
   (ahí va abajo, a 68px). Sobre naranja o navy va en blanco puro.
 - Paginador arriba a la derecha (`01 / 06`).
@@ -61,7 +95,13 @@ Nunca una tercera tipografía.
   Poné el número en el campo `fuentePendiente` y la placa sale con un cartel amarillo
   imposible de pasar por alto hasta que se complete.
 - Una idea por slide. Si la portada ya dio el número, la slide 2 tiene que aportar algo nuevo.
-- El CTA va en la placa, no solo en el copy del posteo.
+- **Nada de botones dibujados.** En un posteo orgánico al feed ningún elemento
+  de la imagen es clickeable: un botón pintado promete un tap que no existe.
+  El contacto va como información (`canal` / `canalAlt`), para leer y guardar.
+- La última placa lleva **la oferta** ("reunión técnica sin cargo", "te armamos
+  el cómputo"). La **instrucción** de cómo responder va en el copy del posteo,
+  que es donde la gente efectivamente la lee. El único link clickeable de todo
+  Instagram es el de la bio.
 - Sin clipart genérico (billetes, flechas, calendarios de stock). Si no aporta información,
   no va.
 

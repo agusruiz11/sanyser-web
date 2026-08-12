@@ -2,32 +2,40 @@
  * Carrusel 3 — Agosto 2026
  * Costos de construcción: mano de obra vs. materiales.
  *
- * Este es el único archivo que hace falta editar para armar un carrusel.
- * Cambiás los textos, corrés `npm run carrusel` y salen los PNG.
+ * DATOS VERIFICADOS contra el informe oficial:
+ * INDEC, Índice del costo de la construcción en el Gran Buenos Aires (ICC),
+ * Junio de 2026 (publicado el 17/07/2026), Cuadro 1 — variación respecto al
+ * mismo mes del año anterior:
+ *
+ *   Nivel general ..... 32,1 %
+ *   Materiales ........ 24,7 %
+ *   Mano de obra ...... 38,7 %
+ *   Gastos generales .. 33,6 %
+ *
+ * https://www.indec.gob.ar/uploads/informesdeprensa/icc_07_266A21F0AB6D.pdf
+ *
+ * El carrusel publicado decía "+38 %" y "+22,5 %". El primero redondea bien;
+ * el segundo no coincide con ninguna cifra del informe (materiales fue 24,7 %).
  */
 
 export const meta = {
   slug: '2026-08-carrusel-03',
-  titulo: 'Costos de construcción — julio 2026',
+  titulo: 'Costos de construcción — ICC junio 2026',
 };
 
-/**
- * OJO: los porcentajes vienen del carrusel original publicado, que no citaba
- * fuente. Hasta no confirmarla, la slide 1 muestra un cartel amarillo que
- * obliga a completarla antes de publicar. Cuando la tengas, reemplazá
- * `fuentePendiente` por `fuente` con el texto real.
- */
+const FUENTE = 'Fuente: INDEC, Índice del costo de la construcción (GBA), junio 2026. Variación interanual.';
+
 export const slides = [
   {
     layout: 'portada',
     fondo: 'navy',
-    kicker: 'Costos de construcción · Julio 2026',
+    kicker: 'Costos de construcción · Junio 2026',
     titulo: 'Mano de obra y materiales ya no suben al mismo ritmo',
     stats: [
-      { valor: '+38%', etiqueta: 'Mano de obra' },
-      { valor: '+22,5%', etiqueta: 'Materiales', secundario: true },
+      { valor: '+38,7%', etiqueta: 'Mano de obra' },
+      { valor: '+24,7%', etiqueta: 'Materiales', secundario: true },
     ],
-    fuentePendiente: 'FALTA FUENTE — completar antes de publicar (INDEC / CAC / cámara sectorial + mes)',
+    fuente: FUENTE,
     deslizar: 'Deslizá →',
   },
 
@@ -36,11 +44,12 @@ export const slides = [
     fondo: 'claro',
     titulo: 'La brecha, en un gráfico',
     barras: [
-      { etiqueta: 'Mano de obra', valor: 38, mostrar: '+38%' },
-      { etiqueta: 'Materiales', valor: 22.5, mostrar: '+22,5%', secundario: true },
+      { etiqueta: 'Mano de obra', valor: 38.7, mostrar: '+38,7%' },
+      { etiqueta: 'Materiales', valor: 24.7, mostrar: '+24,7%', secundario: true },
     ],
     escala: 45, // tope del eje, en las mismas unidades que `valor`
-    remate: 'Son <strong>15,5 puntos</strong> de diferencia entre las dos variables que más pesan en tu presupuesto.',
+    remate: 'Son <strong>14 puntos</strong> de diferencia entre las dos variables que más pesan en tu presupuesto.',
+    fuente: FUENTE,
   },
 
   {
@@ -54,6 +63,7 @@ export const slides = [
   {
     layout: 'declaracion',
     fondo: 'navy',
+    foto: 'bg/obra3.jpeg',
     kicker: 'Una salida posible',
     texto: 'Comprar anticipado en pesos puede funcionar como cobertura.',
     destacado: 'Siempre que la inflación le gane a la devaluación esperada.',
@@ -73,9 +83,11 @@ export const slides = [
 
   {
     layout: 'cierre',
-    fondo: 'naranja',
+    fondo: 'navy',
     titulo: 'Hablemos de tu próxima etapa de obra',
-    cta: 'Comentá <strong>OBRA</strong> y te escribimos por privado.',
+    cta: 'Pasanos tu listado y te devolvemos <strong>precios y stock real</strong>.',
+    canal: 'Escribinos por mensaje directo',
+    canalAlt: 'o WhatsApp 11 2893-3560',
     web: 'sanyser.com.ar',
   },
 ];

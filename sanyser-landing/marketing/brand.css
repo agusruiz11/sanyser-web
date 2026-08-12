@@ -45,9 +45,115 @@ body {
   color: var(--gris-texto);
 }
 
+/* ---------- Formato historia (1080x1920) ----------
+   Instagram tapa con su propia interfaz la franja de arriba (nombre del
+   destacado, foto de perfil) y la de abajo (barra de respuesta, sticker de
+   link). Por eso el padding vertical es mucho mayor que en el carrusel:
+   todo lo que importa vive en el centro de la pantalla. */
+.slide--historia {
+  height: 1920px;
+  padding: 250px 88px 330px;
+}
+.slide--historia .encabezado { margin-bottom: 56px; }
+.slide--historia .display { font-size: 152px; }
+.slide--historia .titulo { font-size: 116px; }
+.slide--historia .texto { font-size: 74px; }
+.slide--historia .paso__num { font-size: 240px; }
+.slide--historia .paso__titulo { font-size: 94px; }
+.slide--historia .paso__texto { font-size: 54px; }
+.slide--historia .kicker { font-size: 34px; }
+.slide--historia .cierre__cta { font-size: 60px; }
+.slide--historia .cierre__canal { font-size: 48px; }
+.slide--historia .cierre__canal-alt { font-size: 36px; }
+
 .slide--navy   { background: var(--navy);   color: var(--blanco); }
 .slide--naranja{ background: var(--naranja);color: var(--blanco); }
 .slide--blanco { background: var(--blanco); color: var(--gris-texto); }
+
+/* Foto de obra propia como fondo. El velo navy la baja lo suficiente para que
+   el texto se lea sin perder la textura: da materia sin competir con el copy. */
+.slide--foto > * { position: relative; z-index: 1; }
+.slide--foto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--foto);
+  background-size: cover;
+  background-position: var(--foco, center);
+  /* `desplazar` corre la foto a la izquierda; la franja que queda libre a la
+     derecha la tapa el degradado horizontal de abajo. */
+  transform: translateX(calc(-1 * var(--desplazar, 0px)));
+}
+.slide--foto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(15,30,55,0.94) 0%, rgba(15,30,55,0.80) 45%, rgba(15,30,55,0.93) 100%);
+}
+
+/* Velo naranja. El naranja es un color claro: si se sube la opacidad hasta
+   proteger el texto, tapa la foto. En vez de eso se oscurece y desatura la
+   foto abajo, y el velo puede quedar bajo — la imagen se ve y el blanco
+   sigue teniendo contraste. */
+.slide--foto.slide--naranja::before {
+  filter: grayscale(0.55) brightness(0.66) contrast(1.06);
+}
+/* Velo liviano arriba y en el medio (ahi vive el motivo de la foto) y pesado
+   abajo, que es donde se apoya el texto. */
+.slide--foto.slide--naranja::after {
+  background: linear-gradient(180deg,
+    rgba(255,85,0,0.58) 0%,
+    rgba(255,85,0,0.40) 32%,
+    rgba(255,85,0,0.52) 55%,
+    rgba(160,48,0,0.90) 100%);
+}
+
+/* Con la foto corrida, el lado derecho se resuelve como panel naranja pleno:
+   la foto queda a la izquierda y el texto se apoya sobre color limpio. El
+   degradado tiene que llegar opaco antes del borde para tapar la franja vacia. */
+.slide--foto--corrida.slide--naranja::after {
+  background:
+    linear-gradient(90deg,
+      rgba(255,85,0,0) 0%,
+      rgba(255,85,0,0) 34%,
+      rgba(255,85,0,0.62) 56%,
+      rgba(255,85,0,0.95) 72%,
+      var(--naranja) 82%),
+    linear-gradient(180deg,
+      rgba(255,85,0,0.58) 0%,
+      rgba(255,85,0,0.40) 32%,
+      rgba(255,85,0,0.52) 55%,
+      rgba(160,48,0,0.90) 100%);
+}
+
+.slide--foto.slide--naranja .deslizar { color: var(--blanco); }
+
+/* El kicker entra como chip navy: mete el segundo color de marca sin depender
+   de que el navy contraste como texto suelto sobre el naranja oscurecido. */
+.slide--foto.slide--naranja .kicker {
+  background: var(--navy);
+  color: var(--blanco);
+  padding: 14px 22px 11px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+/* Palabra destacada del titular en navy. */
+.slide--foto.slide--naranja .display strong { color: var(--navy); font-weight: inherit; }
+
+/* Contenido apoyado abajo, para no taparle la cara al motivo de la foto. */
+.cuerpo--abajo { justify-content: flex-end; }
+
+/* Alineado a la derecha: deja el borde irregular del texto del lado izquierdo.
+   Excepcion reservada a portadas con foto, donde el motivo cae a la izquierda;
+   los interiores siguen todos alineados a la izquierda. */
+.cuerpo--derecha { text-align: right; }
+
+/* El chip del kicker es un item flex: se alinea con align-self, no con
+   text-align. Va despues del bloque de foto para poder pisarlo. */
+.cuerpo .kicker { align-self: flex-start; }
+.cuerpo--derecha .kicker { align-self: flex-end; }
 
 /* ---------- Encabezado fijo: logo + numero de slide ---------- */
 
@@ -102,20 +208,28 @@ body {
 }
 .slide--naranja .kicker { color: var(--navy); }
 
+/* Interlineado 0,96 y no menos: Bebas Neue no deja aire sobre las mayusculas
+   acentuadas y con valores mas ajustados la tilde de A/E/I/O/U choca contra
+   la linea de arriba (CALCULO, INSTALACION, REUNION...). */
 .display {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 132px;
-  line-height: 0.88;
+  line-height: 0.96;
   letter-spacing: 0.005em;
   text-transform: uppercase;
 }
 
 .display--sm { font-size: 104px; }
 
+/* Sobre fondo claro los titulares van en navy, no en el gris del cuerpo:
+   es color de marca y separa mejor la jerarquia. */
+.slide:not(.slide--navy):not(.slide--naranja) .display,
+.slide:not(.slide--navy):not(.slide--naranja) .titulo { color: var(--navy); }
+
 .titulo {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 100px;
-  line-height: 0.92;
+  line-height: 0.96; /* ver nota de acentos en .display */
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
@@ -127,6 +241,9 @@ body {
   font-weight: 400;
   letter-spacing: -0.012em;
 }
+
+/* Para portadas con foto: bloque de texto mas compacto, deja respirar la imagen */
+.texto--sm { font-size: 44px; line-height: 1.28; }
 
 .texto--destacado {
   font-weight: 700;
@@ -250,6 +367,39 @@ body {
 }
 .remate strong { color: var(--naranja); font-weight: 700; }
 
+/* ---------- Layout: paso numerado (un error / un punto por placa) ---------- */
+
+.paso__num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 200px;
+  line-height: 0.8;
+  color: var(--naranja);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 24px;
+}
+.slide--naranja .paso__num { color: var(--navy); }
+
+.paso__titulo {
+  font-size: 62px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+
+/* La consecuencia: por que ese error cuesta plata. Sin esto la placa solo
+   nombra el problema y el carrusel no cumple lo que promete la portada. */
+.paso__texto {
+  margin-top: 34px;
+  padding-top: 30px;
+  border-top: 3px solid currentColor;
+  border-image: linear-gradient(90deg, var(--naranja) 0 90px, transparent 90px) 1;
+  font-size: 36px;
+  line-height: 1.32;
+  font-weight: 400;
+  opacity: 0.88;
+  max-width: 860px;
+}
+
 /* ---------- Layout: lista numerada ---------- */
 
 .lista {
@@ -285,16 +435,43 @@ body {
 
 .cierre__cta {
   margin-top: 52px;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 1.26;
   font-weight: 500;
 }
-.cierre__cta strong { font-weight: 800; }
+.cierre__cta strong { font-weight: 800; color: var(--naranja-claro); }
+/* Sobre naranja el destacado no puede ser naranja: pasa a navy. */
+.slide--naranja .cierre__cta strong { color: var(--navy); }
+
+/* Contacto. NO va como boton: en un posteo al feed nada de la imagen es
+   clickeable, y un boton dibujado promete un tap que no existe. Se presenta
+   como informacion — se lee, se copia, se guarda. */
+.cierre__contacto {
+  margin-top: 56px;
+  padding-left: 30px;
+  border-left: 7px solid var(--naranja);
+}
+
+.cierre__canal {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.cierre__canal-alt {
+  margin-top: 12px;
+  font-size: 32px;
+  font-weight: 500;
+  opacity: 0.72;
+  line-height: 1.25;
+}
 
 .cierre__web {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 0.08em;
+  opacity: 0.7;
 }
 
 .logo--cierre { height: 68px; }
