@@ -40,6 +40,12 @@ const rico = (s = '') => String(s).replace(/&(?!#?\w+;)/g, '&amp;');
 /** Data URI del logo; se completa en construirHtml antes de armar las slides. */
 let LOGO_SRC = '';
 
+/** Logos de las marcas que distribuye Sanyser, desde los assets del sitio. */
+const MARCA_SRC = (archivo) => {
+  const ruta = resolve(aqui, '../src/assets/marcasLogos', archivo);
+  return `data:image/png;base64,${b64(ruta)}`;
+};
+
 const paginador = (i, total) =>
   `<span class="paginador">${String(i + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}</span>`;
 
@@ -110,6 +116,20 @@ const layouts = {
       <div class="paso__num">${esc(s.numero)}</div>
       <h2 class="paso__titulo">${rico(s.titulo)}</h2>
       ${s.texto ? `<p class="paso__texto">${rico(s.texto)}</p>` : ''}
+    </div>
+    <div class="pie">${pieFuente(s)}</div>`,
+
+  ficha: (s) => `
+    <div class="cuerpo">
+      ${s.kicker ? `<p class="kicker">${esc(s.kicker)}</p>` : ''}
+      <img class="ficha__logo" src="${MARCA_SRC(s.logo)}" alt="${esc(s.marca)}" />
+      <div class="ficha__specs">
+        ${(s.specs || []).map(([etiqueta, valor]) => `
+          <div class="ficha__fila">
+            <span class="ficha__etiqueta">${esc(etiqueta)}</span>
+            <span class="ficha__valor ${valor ? '' : 'ficha__valor--pendiente'}">${valor ? rico(valor) : 'DATO A CONFIRMAR'}</span>
+          </div>`).join('')}
+      </div>
     </div>
     <div class="pie">${pieFuente(s)}</div>`,
 

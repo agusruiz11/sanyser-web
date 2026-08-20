@@ -400,6 +400,68 @@ body {
   max-width: 860px;
 }
 
+/* ---------- Layout: ficha de producto ----------
+   Para comparativas. La gracia es que las placas muestren EXACTAMENTE los
+   mismos atributos en el mismo orden y con el mismo tratamiento: si cada una
+   lista lo suyo, no hay comparacion posible, hay tres avisos sueltos.
+   Van siempre sobre fondo blanco: los logos de terceros vienen en colores
+   ajenos (y alguno sin transparencia), asi que el blanco es el unico fondo
+   donde los tres se leen igual de bien. */
+
+.ficha__logo {
+  height: 132px;
+  max-width: 330px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
+.ficha__specs {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ficha__fila {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 2px solid rgba(15, 30, 55, 0.13);
+}
+.ficha__fila:last-child { border-bottom: none; }
+
+.ficha__etiqueta {
+  flex: 0 0 auto;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.ficha__valor {
+  text-align: right;
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  color: var(--navy);
+}
+
+/* Dato sin confirmar. Se ve feo a proposito: la placa no deberia publicarse
+   asi, y de paso queda claro que hay que pedirle el dato al proveedor. */
+.ficha__valor--pendiente {
+  font-size: 24px;
+  font-weight: 700;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 9px 15px;
+  border-radius: 5px;
+  letter-spacing: 0.05em;
+}
+
 /* ---------- Layout: lista numerada ---------- */
 
 .lista {
