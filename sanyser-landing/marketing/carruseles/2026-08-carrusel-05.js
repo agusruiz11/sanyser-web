@@ -10,6 +10,10 @@
  * Cambio de contenido sobre el guion original: cada ítem suma una línea de
  * "por qué te ahorra problemas". La portada lo promete y la versión anterior
  * enumeraba sin contestarlo nunca.
+ *
+ * CORRECCION DEL CLIENTE (via Victoria): el cierre pedia "mandanos los planos
+ * y disenamos el proyecto especialmente para tu obra". Se tomo la idea pero
+ * conservando los entregables concretos: "el proyecto" solo no dice que recibis.
  */
 
 export const meta = {
@@ -76,7 +80,7 @@ export const slides = [
     layout: 'cierre',
     fondo: 'navy',
     titulo: 'Contanos tu proyecto',
-    cta: 'Mandanos los planos y te armamos <strong>la memoria y el cómputo</strong>.',
+    cta: 'Mandanos los planos y diseñamos el proyecto para tu obra: <strong>memoria, cómputo y especificaciones</strong>.',
     canal: 'Escribinos por mensaje directo',
     canalAlt: 'o WhatsApp 11 2893-3560',
     web: 'sanyser.com.ar',

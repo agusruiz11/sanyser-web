@@ -12,6 +12,15 @@
  *    exactamente el servicio antes de publicar.
  * 3. El cierre usa "Pedí una reunión técnica sin cargo", que estaba suelto en
  *    un PNG sin numerar y es mejor CTA que el original.
+ *
+ * CORRECCIONES DEL CLIENTE (via Victoria), aplicadas:
+ *  - Slide 2: la consecuencia del error 01 se detalla ("fabricados con distinto
+ *    material, disenados para distintos usos, distintos plazos de garantia").
+ *  - Slide 4: la consecuencia pasa de administrativa ("queda sin respaldo") a
+ *    tecnica ("no hay forma de saber si el material es el adecuado"), que es
+ *    mejor. El pitch institucional que venia pegado atras NO se metio aca: la
+ *    slide es el error 03 de una serie y la portada promete decir que cuesta
+ *    cada error. Sanyser ya habla de si mismo en la slide 5 y en el cierre.
  */
 
 export const meta = {
@@ -36,7 +45,7 @@ export const slides = [
     kicker: 'Error',
     numero: '01',
     titulo: 'Pedir por precio y no por <strong>especificación técnica completa</strong>',
-    texto: 'Dos productos con el mismo nombre pueden tener distinto material, presión de trabajo y garantía. La diferencia no aparece en el presupuesto: aparece en la instalación.',
+    texto: 'Dos productos con el mismo nombre pueden estar fabricados con distinto material, diseñados para distintos usos o contar con distintos plazos de garantía. La diferencia no aparece en el presupuesto: aparece en la instalación.',
   },
 
   {
@@ -54,7 +63,7 @@ export const slides = [
     kicker: 'Error',
     numero: '03',
     titulo: 'No pedir <strong>documentación técnica</strong> antes de comprar',
-    texto: 'Sin fichas ni certificados, cualquier reclamo posterior queda sin respaldo. Y el que responde ante la dirección de obra sos vos.',
+    texto: 'Sin fichas técnicas ni certificados no hay forma de saber si el material es el adecuado. Y el que responde ante la dirección de obra sos vos.',
   },
 
   {
