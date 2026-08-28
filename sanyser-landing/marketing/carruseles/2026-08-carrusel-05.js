@@ -11,22 +11,29 @@
  * "por qué te ahorra problemas". La portada lo promete y la versión anterior
  * enumeraba sin contestarlo nunca.
  *
- * CORRECCION DEL CLIENTE (via Victoria): el cierre pedia "mandanos los planos
- * y disenamos el proyecto especialmente para tu obra". Se tomo la idea pero
- * conservando los entregables concretos: "el proyecto" solo no dice que recibis.
+ * CORRECCIONES DEL CLIENTE (via Victoria):
+ *  - Cierre: pedia "mandanos los planos y disenamos el proyecto especialmente
+ *    para tu obra". Se tomo la idea pero conservando los entregables concretos:
+ *    "el proyecto" solo no dice que recibis.
+ *  - Portada: el titular pasa a "¿Sabes que incluyen nuestros proyectos
+ *    ejecutivos?". El cliente dice que "memoria de calculo" se entendio mal.
+ *    "Proyecto ejecutivo" es el termino de ellos, no lo inventamos aca; el
+ *    kicker acompana. Los cuatro interiores no cambian: planos, computos,
+ *    especificaciones y documentacion son justamente lo que un proyecto
+ *    ejecutivo incluye, asi que la portada sigue cumpliendo lo que promete.
  */
 
 export const meta = {
   slug: '2026-08-carrusel-05',
-  titulo: 'Qué incluye una memoria de cálculo de instalación sanitaria',
+  titulo: 'Qué incluyen los proyectos ejecutivos de Sanyser',
 };
 
 export const slides = [
   {
     layout: 'portada',
     fondo: 'naranja',
-    kicker: 'Documentación de obra',
-    titulo: '¿Qué incluye una memoria de cálculo de instalación sanitaria?',
+    kicker: 'Proyecto ejecutivo',
+    titulo: '¿Sabés qué incluyen nuestros proyectos ejecutivos?',
     bajada: 'Y por qué te ahorra problemas en obra.',
     deslizar: 'Deslizá →',
   },
