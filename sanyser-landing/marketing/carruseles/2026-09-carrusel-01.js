@@ -4,48 +4,52 @@
  *
  * PORTADA NAVY + FOTO PROPIA: primer tratamiento del ciclo (ver README).
  * El ciclo de agosto cerro en E (navy plano, carrusel 1 de agosto), asi que
- * vuelve a arrancar en A. La ultima tapa publicada es la del carrusel 7
- * (naranja + foto), asi que tampoco se repite con la anterior.
+ * vuelve a arrancar en A.
  *
  * FOTO: `bg/descarga-canos.jpg`, de "Crudos Agosto 2026" del Drive del
  * cliente. Descarga de canos en el deposito, con gente trabajando. Es propia
  * y muestra material y logistica, que es de lo que habla el carrusel.
  *
  * ---------------------------------------------------------------------------
- * NUMEROS — VERIFICADOS
+ * FUENTE UNICA — LA NACION, 24/08/2026
  *
- * Los dos que traia el guion (17% general y 13,2% materiales) salen de
- * CAMARCO (Camara Argentina de la Construccion), acumulado enero-julio 2026,
- * CABA, publicados por El Cronista el 25/08/2026:
+ * "El costo de construccion sube menos que la inflacion pero acelera mas
+ * fuerte que en 2025", sobre el Indicador Camarco.
+ * https://www.lanacion.com.ar/propiedades/construccion-y-diseno/el-costo-de-construccion-sube-menos-que-la-inflacion-pero-acelera-mas-fuerte-que-en-2025-nid24082026/
  *
- *   Costo general .... +17,0 %   (INDEC GBA da +19,2 %)
- *   Materiales ....... +13,2 %   (INDEC GBA da +13,3 %)
- *   Mano de obra ..... +24,8 %   (INDEC GBA da +23,9 %)
+ * Las tres cifras del carrusel salen de ahi, verificadas contra el articulo:
  *
- * https://www.cronista.com/negocios/el-mapa-del-costo-de-la-construccion-que-pesa-mas-hoy-los-materiales-o-la-mano-de-obra/
+ *   Indicador general, acumulado enero-julio 2026 .... +17,0 %
+ *   Mano de obra, acumulado .......................... +24,8 %
+ *   Materiales, acumulado ............................ +13,2 %
  *
  * El guion decia "mano de obra es el componente que mas empuja" SIN numero.
  * Le puse el 24,8 % de la misma fuente: sin la cifra al lado del 13,2 % la
  * comparacion no se ve, y la comparacion es el carrusel entero.
  *
- * OJO — TODAS las cifras de aca son ACUMULADO DEL ANO segun CAMARCO. El
- * carrusel 3 de agosto (todavia sin publicar) usa INTERANUAL segun INDEC:
- * mano de obra +38,7 %, materiales +24,7 %. Los dos estan bien, pero en el
- * mismo feed se leen como una contradiccion. Hay que decidir cual va antes
- * de publicar cualquiera de los dos.
+ * POR QUE CAMARCO Y NO INDEC (decidido con el cliente, 31-08-2026): Camarco
+ * mide el ano vigente, INDEC mide interanual (julio 2025 a julio 2026). Para
+ * el que esta comprando ahora, el acumulado del ano es el numero util. El
+ * carrusel 3 de agosto, que usaba INDEC interanual, quedo descartado y nunca
+ * se publico, asi que ya no hay dos indices conviviendo en el feed.
  *
  * ---------------------------------------------------------------------------
- * DOS SLIDES BLOQUEADAS
+ * DOS SLIDES DEL GUION ORIGINAL QUE NO SOBREVIVIERON
  *
- * Las slides 3 y 4 salen con el cartel amarillo a proposito: el guion las
- * trae sin fuente y no estan en el articulo que respalda los numeros.
+ * 1. LA CITA DE "MANUEL VALDES, DIRECTOR COMERCIAL DE CRIBA". No esta en el
+ *    articulo. Valdes existe y es de Criba, pero esa frase ("planificar con
+ *    prudencia y asegurar respaldo contractual...") no aparece por ningun
+ *    lado en la fuente. Poner palabras en la boca de una persona real e
+ *    identificable, sin tener de donde salieron, no se hace.
  *
- *  - Slide 3: la cita de Manuel Valdes (Criba). Es una persona real con
- *    nombre y cargo. Sin saber de donde sale, no se publica.
- *  - Slide 4: "stock de insumos importados y capacidad ociosa en planta" es
- *    una afirmacion sobre el mercado, no una opinion. Necesita respaldo.
+ *    En su lugar va la cita que el articulo SI trae, de Santiago Tarasido,
+ *    CEO de Criba, copiada textual. Dice algo distinto y mejor para la pieza:
+ *    que el costo dejo de crecer y que ahora la discusion es de eficiencia.
  *
- * Cuando aparezcan las fuentes, se reemplaza `fuentePendiente` por `fuente`.
+ * 2. "HAY STOCK DE INSUMOS IMPORTADOS Y CAPACIDAD OCIOSA EN PLANTA". Tampoco
+ *    esta en el articulo. Era la placa de "por que no se dispara mas", y esa
+ *    funcion la cumple mejor la cita de Tarasido, que si tiene respaldo.
+ *    La slide se elimino: el carrusel pasa de 6 a 5 placas.
  */
 
 export const meta = {
@@ -53,7 +57,7 @@ export const meta = {
   titulo: 'Contexto de mercado — cuánto subió la obra en 2026',
 };
 
-const FUENTE = 'Fuente: CAMARCO, costo de la construcción en CABA. Acumulado enero–julio 2026.';
+const FUENTE = 'Fuente: Indicador Camarco. Acumulado enero–julio 2026, vía La Nación (24/08/2026).';
 
 export const slides = [
   {
@@ -83,26 +87,18 @@ export const slides = [
   },
 
   {
+    // Cita textual del articulo. No se recorta ni se retoca.
     layout: 'declaracion',
     fondo: 'navy',
     kicker: 'Cómo lo leen en el sector',
-    texto: '"La prioridad es planificar con prudencia y asegurar respaldo contractual antes de iniciar nuevas etapas."',
-    destacado: 'Manuel Valdés, director comercial de Criba.',
-    fuentePendiente: 'FALTA FUENTE: de dónde sale esta cita. Sin eso no se publica.',
+    texto: '"Es un costo que ya ha dejado de crecer de alguna manera y hay que empezar a buscarle la vuelta desde cada sector y empresa para apuntar a la eficiencia."',
+    destacado: 'Santiago Tarasido, CEO de Criba.',
+    fuente: 'La Nación, 24 de agosto de 2026.',
   },
 
   {
     layout: 'declaracion',
     fondo: 'claro',
-    kicker: 'Por qué no se dispara más',
-    texto: 'Hay stock de insumos importados y capacidad ociosa en planta.',
-    destacado: 'Eso viene conteniendo los precios.',
-    fuentePendiente: 'FALTA FUENTE: stock de importados y capacidad ociosa en planta.',
-  },
-
-  {
-    layout: 'declaracion',
-    fondo: 'navy',
     kicker: 'Lo que sí podés controlar',
     texto: 'El índice no lo manejás.',
     destacado: 'La previsibilidad sí: se construye sabiendo con qué proveedor no te vas a llevar sorpresas.',
