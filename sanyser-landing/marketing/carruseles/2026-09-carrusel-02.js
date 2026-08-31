@@ -26,16 +26,16 @@
  *
  * "acuerdos directos de fabrica" ya se uso en el carrusel 3 de agosto.
  *
- * OJO — "DISTRIBUIDOR OFICIAL" NO ESTA EN EL SITIO. El FAQ dice "trabajamos
- * con mas de 25 marcas lideres" y la pregunta es "¿que marcas distribuyen?".
- * Nunca dice "distribuidor oficial", que es un escalon mas fuerte: implica un
- * acuerdo formal de distribucion autorizada con cada fabricante. La frase la
- * escribio el cliente sobre su propio negocio, asi que va como la mando, pero
- * conviene que la confirmen: el publico de esta pieza son arquitectos y jefes
- * de compras, que son justo los que pueden chequearlo con el fabricante.
+ * "DISTRIBUIDOR OFICIAL" SE SACO. El guion original decia "somos distribuidor
+ * oficial de 25+ marcas". No esta en el sitio: el FAQ dice "trabajamos con mas
+ * de 25 marcas lideres" y la pregunta es "¿que marcas distribuyen?". "Oficial"
+ * es un escalon mas fuerte, implica acuerdo formal de distribucion autorizada
+ * con cada fabricante, y el publico de esta pieza son arquitectos y jefes de
+ * compras, que son justo los que pueden chequearlo con el fabricante.
+ * Consultado con el cliente via Victoria (31-08-2026): lo sacamos.
  *
- * Si prefieren la version del sitio, la slide 5 pasa a:
- *   'Trabajamos con más de 25 marcas, con acuerdos directos de fábrica.'
+ * Lo que sostiene el argumento igual no era "oficial" sino los acuerdos
+ * directos de fabrica, que si estan respaldados.
  */
 
 export const meta = {
@@ -81,7 +81,7 @@ export const slides = [
     layout: 'declaracion',
     fondo: 'navy',
     kicker: 'Cómo la sostenemos',
-    texto: 'Somos distribuidor oficial de más de 25 marcas, con acuerdos directos de fábrica.',
+    texto: 'Trabajamos con más de 25 marcas, con acuerdos directos de fábrica.',
     destacado: 'Por eso podemos mantener la marca especificada a un precio competitivo.',
   },
 
